@@ -2,7 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@core/*": ["app/*"],
+      "@header/*": ["app/header/*"],
+      "@websites/*": ["app/websites/*"],
+      "@shared/*": ["app/shared/*"],
+      "@images/*": ["assets/images/*"]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
