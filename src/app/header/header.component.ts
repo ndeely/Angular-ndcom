@@ -8,11 +8,11 @@ import {Website} from '@websites/website.model';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  private websites: Website[];
+  sites: Website[];
 
   constructor(private ws: WebsitesService) { }
 
   ngOnInit() {
-    this.websites = this.ws.getSites();
+    this.sites = this.ws.getSites();
   }
 }

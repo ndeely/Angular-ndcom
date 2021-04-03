@@ -1,9 +1,18 @@
+h1, h3 {
+  text-align:center;
+}
+
 a {
   cursor: pointer;
 }
 
+.container .row div.site {
+  height:300px;
+}
+
 .container .row p {
   color:#000;
+  text-align: center;
 }
 
 .container .row a {
@@ -13,5 +22,11 @@ a {
 
 .container .row img {
   max-width:90%;
+  margin:25px auto;
   box-shadow: 3px 3px #ccc;
+}
+
+.container .row button {
+  margin:20px auto;
+  display:block;
 }
