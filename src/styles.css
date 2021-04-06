@@ -6,27 +6,34 @@ a {
   cursor: pointer;
 }
 
-.container .row div.site {
+#body .container {
+  background-color:#f1f1f1;
+  Font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#body .container .row div.site {
   height:300px;
 }
 
-.container .row p {
+#body .container .row p {
+  font-size:20px;
   color:#000;
   text-align: center;
 }
 
-.container .row a {
+#body .container .row a {
   text-decoration:none;
   cursor:pointer;
 }
 
-.container .row img {
+#body .container .row img {
   max-width:90%;
   margin:25px auto;
   box-shadow: 3px 3px #ccc;
 }
 
-.container .row button {
+#body .container .row button {
   margin:20px auto;
   display:block;
 }
+

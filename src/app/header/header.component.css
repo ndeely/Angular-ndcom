@@ -1,0 +1,23 @@
+nav.navbar {
+  border:none;
+  border-radius: 0px;
+}
+
+nav.navbar, ul.dropdown-menu {
+  background: -webkit-linear-gradient(to bottom right, #005bea, #00c6fb);
+  background: -o-linear-gradient(to bottom right, #005bea, #00c6fb);
+  background: -moz-linear-gradient(to bottom right, #005bea, #00c6fb);
+  background: linear-gradient(to bottom right, #005bea, #00c6fb);
+}
+
+nav.navbar a, ul.dropdown-menu p {
+  color:#fff !important;
+}
+
+ul.navbar-nav li a:hover, li.dropdown.open a.dropdown-toggle {
+  background-color: #005bea !important;
+}
+
+ul.dropdown-menu p {
+  text-align: center;
+}

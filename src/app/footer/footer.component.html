@@ -1,0 +1,32 @@
+<footer class="bg-info text-center text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4">
+        <h5>Websites</h5>
+        <ul class="list-unstyled mb-0">
+          <li *ngFor="let site of sites">
+            <a routerLink="websites/{{site.id}}">{{site.name}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-4">
+        <h5>Projects</h5>
+        <ul class="list-unstyled mb-0">
+          <li *ngFor="let site of sites">
+            <a routerLink="websites/{{site.id}}">{{site.name}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-4">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <button class="btn btn-primary" (click)="openUrl('https://www.github.com/ndeely')"><i class="fa fa-github"></i> GitHub</button>
+          </li>
+          <li>
+            <button class="btn btn-primary" (click)="openUrl('https://www.linkedin.com/in/nialldeely/')"><i class="fa fa-linkedin"></i> LinkedIn</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

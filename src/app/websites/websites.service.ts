@@ -47,9 +47,9 @@ export class WebsitesService {
     new Website(
       3,
       'Ruby on Rails',
-      'Ruby On Rails is a popular model-view-controller (MVC) framework for building websites using the programming language Ruby.<br><br>' +
-      'I began using Ruby on Rails in 2020 during my Computer Science college course. While I was not familiar with ' +
-      'the programming language Ruby at the time, I picked it up very quickly due to my experience with other object-oriented ' +
+      'Ruby On Rails is a popular model-view-controller (MVC) framework for building websites using the programming ' +
+      'language Ruby.<br><br>I began using Ruby on Rails in 2020 during my Computer Science college course. While I was not familiar ' +
+      'with the programming language Ruby at the time, I picked it up very quickly due to my experience with other object-oriented ' +
       'programming languages such as Java, C# and Python.<br><br>' +
       'I quickly fell in love with the MVC framework approach to building websites, and have continued to develop my knowledge ' +
       'of Ruby on Rails after finishing the college course. I have also branched into several other MVC frameworks which are ' +

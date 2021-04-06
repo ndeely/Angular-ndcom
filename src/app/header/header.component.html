@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" routerLink="">Portfolio</a>
@@ -16,14 +16,16 @@
         <li class="dropdown" appDropdown>
           <a class="dropdown-toggle" data-toggle="dropdown" role="button">Projects<span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <p>Java</p>
+            <li *ngFor="let site of sites"><a routerLink="websites/{{site.id}}">{{site.name}}</a></li>
             <li><a>Work in progress..</a></li>
           </ul>
         </li>
         <li>
-          <a href="https://www.github.com/ndeely" target="_blank">GitHub</a>
+          <a href="https://www.github.com/ndeely" target="_blank"><i class="fa fa-github"></i> GitHub</a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/nialldeely/" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/nialldeely/" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
         </li>
       </ul>
     </div>

@@ -7,6 +7,9 @@ import {AppRoutingModule} from '@core/app-routing.module';
 import { WebsitesComponent } from './websites/websites.component';
 import {DropdownDirective} from '@shared/dropdown.directive';
 import { HomeComponent } from './home/home.component';
+import { ProjectJavaComponent } from './projects/java/project-java.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     WebsitesComponent,
     DropdownDirective,
-    HomeComponent
+    HomeComponent,
+    ProjectJavaComponent,
+    ProjectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
