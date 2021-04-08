@@ -4,14 +4,14 @@ import {NgModule} from '@angular/core';
 import {HomeComponent} from '@core/home/home.component';
 import {WebsitesComponent} from '@websites/websites.component';
 import {ProjectsComponent} from '@projects/projects.component';
-import {ProjectJavaComponent} from '@core/projects/java/project-java.component';
+import {ProjectCategoryComponent} from '@projects/category/project-category.component';
 
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'websites/:id', component: WebsitesComponent},
   {path: 'projects/:id', component: ProjectsComponent},
-  {path: 'projects/java/:id', component: ProjectJavaComponent}
+  {path: 'category/:tag', component: ProjectCategoryComponent}
 
 ];
 

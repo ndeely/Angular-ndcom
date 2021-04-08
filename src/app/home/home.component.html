@@ -10,6 +10,7 @@
 </div>
 <div class="container">
   <div class="row">
+    <h2>Websites</h2>
     <div class=" site col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1" *ngFor="let site of sites">
       <a routerLink="websites/{{site.id}}">
         <h3>{{site.name}}</h3>
@@ -18,8 +19,12 @@
     </div>
   </div>
   <div class="row">
+    <h2>Projects</h2>
     <div class=" site col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1" *ngFor="let project of projects">
-      <p>Placeholder</p>
+        <a routerLink="projects/{{project.id}}">
+          <h3>{{project.name}}</h3>
+          <img src="{{project.imagePaths[0]}}" alt="{{project.name}}" />
+        </a>
     </div>
   </div>
 </div>

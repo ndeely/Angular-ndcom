@@ -18,5 +18,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.sites = this.ws.getSites();
+    this.projects = this.ps.getProjects();
   }
 }
