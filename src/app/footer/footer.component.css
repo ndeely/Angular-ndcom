@@ -2,6 +2,10 @@ footer {
   margin-top:20px;
 }
 
+footer h5 {
+  font-weight: bold;
+}
+
 footer button {
   margin:10px 0px;
 }

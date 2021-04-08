@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {WebsitesService} from '@websites/websites.service';
 import {Website} from '@websites/website.model';
+import {Project} from '@projects/project.model';
+import {ProjectsService} from '@projects/projects.service';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +11,10 @@ import {Website} from '@websites/website.model';
 })
 export class HeaderComponent implements OnInit {
   sites: Website[];
+  projects: Project[];
 
-  constructor(private ws: WebsitesService) { }
+  constructor(private ws: WebsitesService,
+              private ps: ProjectsService) { }
 
   ngOnInit() {
     this.sites = this.ws.getSites();
