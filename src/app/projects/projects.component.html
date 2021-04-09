@@ -11,11 +11,12 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <img *ngFor="let imgPath of project.imagePaths"
-        src="{{imgPath}}"
-        alt="{{project.name}}"
-        class="img-responsive col-xs-4"
-        style="max-height: 300px;">
+      <div class="col-xs-4" *ngFor="let imgPath of project.imagePaths">
+        <img
+          src="{{imgPath}}"
+          alt="{{project.name}}"
+          class="img-responsive">
+      </div>
     </div>
   </div>
   <div class="row">

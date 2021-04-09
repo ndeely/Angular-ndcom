@@ -1,14 +1,14 @@
+<div class="container">
 <div class="row">
   <h2>{{category}} Projects</h2>
-  <div class=" site col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1" *ngFor="let project of projects">
-    <div class="row">
-      <div class="col-xs-12">
-        Tags: <a *ngFor="let tag of project.tags" routerLink="/category/{{tag}}">{{tag}} </a>
-      </div>
-    </div>
+  <div class="project col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1" *ngFor="let project of projects">
     <a routerLink="/projects/{{project.id}}">
       <h3>{{project.name}}</h3>
       <img src="{{project.imagePaths[0]}}" alt="{{project.name}}" />
     </a>
+    <div class="col-xs-12">
+      Tags: <a *ngFor="let tag of project.tags" routerLink="/category/{{tag}}">{{tag}} </a>
+    </div>
   </div>
+</div>
 </div>
