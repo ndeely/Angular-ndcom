@@ -8,23 +8,23 @@ export class ProjectsService {
     new Project(
       0,
       'Java DIY Games',
-      ['Java'],
+      ['Java', 'JFrame'],
       'This repository contains a number of Java JFrame games I have created as a learning experience.<br><br>' +
       'The notable inclusions are:<br>' +
+      '<h4>Watch Your Step</h4>' +
+      '<p>Watch Your Step is a Minesweeper clone which allows you to try to expose all of the squares without ' +
+      'falling into a hole. Suspected holes can be marked with a skull and crossbones.</p>' +
       '<h4>Framed</h4>' +
       '<p>Framed is a simple game where you must turn on all of the lights in a 3x3 grid to win. However, switching ' +
       'a light will also affect the lights directly above, below, or to the side of the light that was switched.</p>' +
       '<h4>Guess My Color</h4>' +
       '<p>With Guess My Color, the aim of the game is to turn your color cube to the color of the cube next to it. ' +
-      'This can be done by adding or removing the colors red, green and blue until you find a match.</p>' +
-      '<h4>Watch Your Step</h4>' +
-      '<p>Watch Your Step is a Minesweeper clone which allows you to try to expose all of the squares without ' +
-      'falling into a hole. Suspected holes can be marked with a skull and crossbones.</p>'
+      'This can be done by adding or removing the colors red, green and blue until you find a match.</p>'
       ,
       [
+        '/assets/images/DIYGames/WatchYourStep.png',
         '/assets/images/DIYGames/Framed.png',
-        '/assets/images/DIYGames/GuessMyColor.png',
-        '/assets/images/DIYGames/WatchYourStep.png'
+        '/assets/images/DIYGames/GuessMyColor.png'
       ],
       'github.com/ndeely/DIYGames'
     ),
