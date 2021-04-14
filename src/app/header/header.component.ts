@@ -20,4 +20,8 @@ export class HeaderComponent implements OnInit {
     this.sites = this.ws.getSites();
     this.projects = this.ps.getProjects();
   }
+
+  collapse() {
+    document.getElementsByClassName('navbar-collapse')[0].classList.toggle('collapse');
+  }
 }

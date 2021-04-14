@@ -1,11 +1,13 @@
 footer {
   margin-top:20px;
+  background-color:#001529;
 }
 
-footer h5 {
+h5 {
   font-weight: bold;
+  color: #fff;
 }
 
-footer button {
+button {
   margin:10px 0px;
 }

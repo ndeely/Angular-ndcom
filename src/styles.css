@@ -2,7 +2,12 @@ h1, h2, h3, h4, h5 {
   text-align:center;
 }
 
-h1, h4 {
+h1 {
+  background-color:#001529;
+  color: #fff;
+}
+
+h4 {
   text-decoration: underline;
   color: #005bea;
 }
@@ -17,7 +22,7 @@ a {
 }
 
 #body .container .row div.site {
-  height:300px;
+  min-height:300px;
 }
 
 #body .container .row p {

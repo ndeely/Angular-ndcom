@@ -10,6 +10,18 @@ import { HomeComponent } from './home/home.component';
 import { ProjectCategoryComponent } from '@projects/category/project-category.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IconsProviderModule } from './icons-provider.module';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -24,9 +36,15 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    IconsProviderModule,
+    NzLayoutModule,
+    NzMenuModule
   ],
-  providers: [],
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
