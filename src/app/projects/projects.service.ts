@@ -31,7 +31,7 @@ export class ProjectsService {
     new Project(
       1,
       'Morra Odds and Evens',
-['Java'],
+['Java', 'Command Line'],
 '<h3>“Morra Odds and Evens” game rules</h3>' +
   '<ol>' +
   '<li>Two-player game. One player is team Odds and the other is team Evens.</li>' +
@@ -57,7 +57,7 @@ export class ProjectsService {
     new Project(
       3,
       'Java Words Game',
-      ['Java'],
+      ['Java', 'Command Line'],
       '<h3>“Java Words Game” game rules:</h3>' +
       '<ol>' +
       '<li>The game is played between two players, both human users.</li>' +
@@ -84,6 +84,23 @@ export class ProjectsService {
       'points along the game.</li></ol>',
       [],
       'github.com/ndeely/JavaWordsGame'
+    ),
+    new Project(
+      4,
+      'Project Euler Solutions',
+      ['Java', 'Command Line'],
+      '<h3>Project Euler Solutions</h3>' +
+      '<blockquote><p><a href="https://projecteuler.net/" target="_blank">Project Euler</a> is a series of challenging ' +
+      'mathematical/computer programming problems that will require more than just mathematical insights to ' +
+      'solve.</p></blockquote>' +
+      '<p>I have used this website to practice my coding and problem solving skills. I have recently decided to put my ' +
+      'solutions to the problems provided into a GitHub repository, which is provided below. While many programming ' +
+      'languages can be used to solve these problems, I have used Java for my solutions as it is the language I would ' +
+      'be most familiar with.</p>' +
+      '<p>I will not include solutions to the problems #100+, as the creators of the project do not wish to have solutions to ' +
+      'the more complicated problems shared.</p>',
+      [],
+      'github.com/ndeely/Project-Euler'
     )
   ];
 
