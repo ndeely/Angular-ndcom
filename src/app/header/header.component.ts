@@ -1,8 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import {WebsitesService} from '@websites/websites.service';
 import {Website} from '@websites/website.model';
 import {Project} from '@projects/project.model';
 import {ProjectsService} from '@projects/projects.service';
+import {NavigationStart, Router} from '@angular/router';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -12,16 +14,25 @@ import {ProjectsService} from '@projects/projects.service';
 export class HeaderComponent implements OnInit {
   sites: Website[];
   projects: Project[];
+  navOpen = false;
+  url = '';
+  subscription: Subscription;
 
   constructor(private ws: WebsitesService,
-              private ps: ProjectsService) { }
+              private ps: ProjectsService,
+              private router: Router) {}
 
   ngOnInit() {
     this.sites = this.ws.getSites();
     this.projects = this.ps.getProjects();
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.navOpen = false;
+      }
+    });
   }
 
-  collapse() {
-    document.getElementsByClassName('navbar-collapse')[0].classList.toggle('collapse');
+  toggleNav() {
+    this.navOpen = !this.navOpen;
   }
 }

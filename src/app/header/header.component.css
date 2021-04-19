@@ -6,6 +6,10 @@
   display:none;
 }
 
+.navbar-brand {
+  padding:10px 10px;
+}
+
 nav.navbar {
   border:none;
   border-radius: 0px;

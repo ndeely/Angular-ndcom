@@ -1,11 +1,13 @@
 <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">Portfolio</a>
-      <a class="hamburger" (click)="collapse()"><i class="fa fa-bars"></i></a>
+      <a class="navbar-brand" routerLink="">
+        <img src="./assets/images/favicon.png" style="max-width:30px;" />
+      </a>
+      <a class="hamburger" (click)="toggleNav()"><i class="fa fa-bars"></i></a>
     </div>
 
-    <div class="collapse navbar-collapse">
+    <div class="navbar-collapse" *ngIf="navOpen">
       <ul class="nav navbar-nav">
         <li class="dropdown" appDropdown>
           <a class="dropdown-toggle" data-toggle="dropdown" role="button">Websites<span class="caret"></span></a>

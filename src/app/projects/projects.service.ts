@@ -89,7 +89,6 @@ export class ProjectsService {
       4,
       'Project Euler Solutions',
       ['Java', 'Command Line'],
-      '<h3>Project Euler Solutions</h3>' +
       '<blockquote><p><a href="https://projecteuler.net/" target="_blank">Project Euler</a> is a series of challenging ' +
       'mathematical/computer programming problems that will require more than just mathematical insights to ' +
       'solve.</p></blockquote>' +

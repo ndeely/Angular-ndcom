@@ -16,6 +16,10 @@ a {
   cursor: pointer;
 }
 
+#body {
+  min-height:65vh;
+}
+
 #body .container {
   background-color:#f1f1f1;
   Font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
