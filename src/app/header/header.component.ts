@@ -3,8 +3,6 @@ import {WebsitesService} from '@websites/websites.service';
 import {Website} from '@websites/website.model';
 import {Project} from '@projects/project.model';
 import {ProjectsService} from '@projects/projects.service';
-import {NavigationStart, Router} from '@angular/router';
-import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -14,25 +12,24 @@ import {Subscription} from 'rxjs';
 export class HeaderComponent implements OnInit {
   sites: Website[];
   projects: Project[];
-  navOpen = false;
-  url = '';
-  subscription: Subscription;
 
   constructor(private ws: WebsitesService,
-              private ps: ProjectsService,
-              private router: Router) {}
+              private ps: ProjectsService) {}
 
   ngOnInit() {
     this.sites = this.ws.getSites();
     this.projects = this.ps.getProjects();
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationStart) {
-        this.navOpen = false;
+
+    window.addEventListener('click', function(e){
+      if (!document.getElementsByClassName('navbar-collapse')[0].classList.contains('collapse') &&
+        !document.getElementsByClassName('navbar-collapse')[0].contains(e.target) &&
+        (!document.getElementsByClassName('hamburger')[0].contains(e.target))) {
+        document.getElementsByClassName('navbar-collapse')[0].classList.add('collapse');
       }
     });
   }
 
   toggleNav() {
-    this.navOpen = !this.navOpen;
+    document.getElementsByClassName('navbar-collapse')[0].classList.toggle('collapse');
   }
 }
