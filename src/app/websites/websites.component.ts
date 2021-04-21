@@ -6,7 +6,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 @Component({
   selector: 'app-websites',
   templateUrl: './websites.component.html',
-  styleUrls: ['./websites.component.css']
+  styleUrls: ['./websites.component.scss']
 })
 export class WebsitesComponent implements OnInit {
   site: Website;
