@@ -24,7 +24,6 @@ nav.navbar a, ul.dropdown-menu p {
 }
 
 ul.navbar-nav li a:hover, ul.navbar-nav li a:active, ul.navbar-nav li a:focus, li.dropdown.open a.dropdown-toggle {
-  /*background-color: #005bea !important;*/
   background-color: #1890FF;
 }
 
