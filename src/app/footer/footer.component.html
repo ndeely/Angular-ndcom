@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xs-4">
         <h5>Websites</h5>
-        <ul class="list-unstyled mb-0">
+        <ul class="list-styled">
           <li *ngFor="let site of sites">
             <a routerLink="websites/{{site.id}}">{{site.name}}</a>
           </li>
@@ -12,7 +12,7 @@
 
       <div class="col-xs-4">
         <h5>Projects</h5>
-        <ul class="list-unstyled mb-0">
+        <ul class="list-styled">
           <li *ngFor="let project of projects">
             <a routerLink="projects/{{project.id}}">{{project.name}}</a>
           </li>
@@ -20,7 +20,7 @@
       </div>
 
       <div class="col-xs-4">
-        <ul class="list-unstyled mb-0">
+        <ul>
           <li>
             <button class="btn btn-primary" (click)="openUrl('https://www.github.com/ndeely')"><i class="fa fa-github"></i> GitHub</button>
           </li>
