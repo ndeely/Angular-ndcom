@@ -1,1 +1,78 @@
+* {
+  margin:0px;
+}
 
+.container {
+  margin: 10px 0px;
+  h2 {
+    padding: 10px;
+  }
+}
+
+.introText {
+  width: 100%;
+  padding: 20px;
+  p {
+    padding:10px 40px;
+  }
+}
+
+.sites, .projects {
+  background-color:#001529;
+}
+
+.menu {
+  background-color:#001529;
+  padding:5px;
+  ul {
+    list-style-type: none;
+    padding:0px;
+    a {
+      display: block;
+      width:100%;
+      &:hover {
+        text-decoration: none;
+        li {
+          background-color: #1890FF;
+        }
+      }
+      li {
+        border:1px solid #1890FF;
+        color: #fff;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding:15px;
+        &.active {
+          background-color: #1890FF;
+        }
+      }
+    }
+  }
+}
+
+.siteImage img {
+  max-height: 300px;
+  display: block;
+  margin:auto;
+  margin-bottom:-10px;
+  padding:10px;
+}
+
+.projectImage img {
+  max-height: 250px;
+  display: inline;
+  padding: 5px;
+}
+
+.desc {
+  p {
+    color: #fff;
+    padding: 5px 10px;
+    blockquote {
+      background-color: transparent;
+    }
+  }
+  .btn, a.btn {
+    display: block;
+    margin: 10px auto;
+  }
+}
