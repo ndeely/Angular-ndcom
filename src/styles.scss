@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url(./assets/fonts/Lato-Regular.eot);
+  src: local("Lato"), url(./assets/fonts/Lato-Regular.eot?#iefix) format('embedded-opentype'),
+  local("Lato"), url(./assets/fonts/Lato-Regular.woff) format('woff'),
+  local("Lato"), url(./assets/fonts/Lato-Regular.ttf)  format('truetype'),
+  local("Lato"), url(./assets/fonts/Lato-Regular.svg#svgFontName) format('svg');
+}
+
+body {
+  font-family: Lato, sans-serif;
+}
+
 h1, h2, h3, h4, h5 {
   text-align:center;
 }
@@ -15,39 +28,6 @@ h4 {
 a {
   cursor: pointer;
 }
-
-//#body .container {
-//  background-color:#f1f1f1;
-//  Font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-//}
-//
-//#body .container .row div.site {
-//  min-height:300px;
-//}
-//
-//#body .container .row p {
-//  font-size:16px;
-//  color:#000;
-//  text-align: center;
-//}
-//
-//#body .container .row a {
-//  text-decoration:none;
-//  cursor:pointer;
-//}
-//
-//#body .container .row img {
-//  display: block;
-//  max-width:90%;
-//  margin:25px auto;
-//  box-shadow: 3px 3px #ccc;
-//  padding:0px;
-//}
-//
-//#body .container .row button {
-//  margin:20px auto;
-//  display:block;
-//}
 
 ol {
   text-align: left;
