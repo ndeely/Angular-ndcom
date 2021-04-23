@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Portfolio</h1>
-  <div class="introText col-xs-10 col-xs-offset-1">
+  <div class="introText jumbotron col-xs-10 col-xs-offset-1">
     <p>Welcome to my website!</p>
     <p>This website showcases some example websites I am working on using various frameworks, and some projects
       that I have completed in a range of programming languages.</p>
@@ -11,17 +11,22 @@
   <div class="sites">
     <div class="row">
       <div class="menu col-xs-12 col-md-4">
-        <ul>
-          <a *ngFor="let site of sites" (click)="selectSite(site.id)">
-            <li>{{ site.name | uppercase }}</li>
-          </a>
-        </ul>
+        <div class="btn-group-vertical btn-group-lg">
+            <button *ngFor="let site of sites" class="btn btn-info" (click)="selectSite(site.id)">
+              {{ site.name }}
+            </button>
+        </div>
       </div>
       <div class="siteImage col-xs-12 col-md-8">
         <div *ngIf="!selectedSite">
           <span *ngFor="let site of sites">
             <a (click)="selectSite(site.id)">
-              <img src="{{ site.imagePath }}" alt="{{ site.name }}" style="display: inline; max-width:180px;" />
+              <img
+                src="{{ site.imagePath }}"
+                alt="{{ site.name }}"
+                style="display: inline; margin: 0px 5px 5px 0px;"
+                class="img-thumbnail"
+              />
             </a>
           </span>
         </div>
@@ -41,11 +46,11 @@
   <div class="projects">
     <div class="row">
       <div class="menu col-xs-12 col-md-4">
-        <ul>
-          <a *ngFor="let project of projects" (click)="selectProject(project.id)">
-            <li>{{ project.name | uppercase }}</li>
-          </a>
-        </ul>
+        <div class="btn-group-vertical btn-group-lg">
+          <button *ngFor="let project of projects" class="btn btn-info" (click)="selectProject(project.id)">
+            {{ project.name }}
+          </button>
+        </div>
       </div>
       <div class="projectImage col-xs-12 col-md-8">
         <div *ngIf="!selectedProject">
@@ -54,7 +59,9 @@
               <img
                 *ngFor="let imagePath of project.imagePaths"
                 src="{{ imagePath }}" alt="{{ project.name }}"
-                style="display: inline; max-width:180px;" />
+                style="display: inline;"
+                class="img-thumbnail"
+              />
             </a>
           </span>
         </div>

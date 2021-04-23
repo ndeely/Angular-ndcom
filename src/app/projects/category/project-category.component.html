@@ -7,7 +7,11 @@
       <img *ngIf="project.imagePaths.length > 0" src="{{project.imagePaths[0]}}" alt="{{project.name}}" />
     </a>
     <div class="col-xs-12">
-      Tags: <a *ngFor="let tag of project.tags" routerLink="/category/{{tag}}">{{tag}} </a>
+      Tags:
+      <span *ngFor="let tag of project.tags">
+        <a routerLink="/category/{{tag}}">
+        <span class="badge">{{tag}}</span></a>&nbsp;
+      </span>
     </div>
   </div>
 </div>

@@ -4,9 +4,13 @@
       <h1>{{project.name}}</h1>
     </div>
   </div>
-  <div class="row">
+  <div class="row" style="margin-bottom:10px;">
     <div class="col-xs-12">
-      Tags: <a *ngFor="let tag of project.tags" routerLink="/category/{{tag}}">{{tag}} </a>
+      Tags:
+      <span *ngFor="let tag of project.tags">
+        <a routerLink="/category/{{tag}}">
+        <span class="badge">{{tag}}</span></a>&nbsp;
+      </span>
     </div>
   </div>
   <div class="row">

@@ -22,27 +22,13 @@
 }
 
 .menu {
-  background-color:#001529;
   padding:5px;
-  ul {
-    list-style-type: none;
-    padding:0px;
-    a {
-      display: block;
-      width:100%;
-      &:hover {
-        text-decoration: none;
-        li {
-          background-color: #1890FF;
-        }
-      }
-      li {
-        border:1px solid #1890FF;
-        color: #fff;
-        padding:15px;
-        &.active {
-          background-color: #1890FF;
-        }
+  .btn-group-vertical {
+    width: 100%;
+    button {
+      background-color:#001529;
+      &:hover, &.active {
+        background-color: #1890FF;
       }
     }
   }
@@ -50,18 +36,22 @@
 
 .siteImage img {
   max-height: 300px;
-  max-width: 95%;
   display: block;
   margin:auto;
-  margin-bottom:-10px;
-  padding:10px;
 }
 
 .projectImage img {
   max-height: 250px;
-  max-width: 95%;
   display: inline;
-  padding: 5px;
+}
+
+.siteImage img, .projectImage img {
+  max-width: 95%;
+}
+
+.siteImage img.img-thumbnail, .projectImage img.img-thumbnail {
+  margin: 0px 5px 5px 0px;
+  max-width:48%;
 }
 
 .desc {

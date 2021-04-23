@@ -24,9 +24,8 @@ export class HomeComponent implements OnInit {
   }
 
   selectSite(id: number) {
-    const list = document.getElementsByClassName('menu')[0]
-      .getElementsByTagName('ul')[0]
-      .getElementsByTagName('li');
+    const list = document.getElementsByClassName('btn-group-vertical')[0]
+      .getElementsByTagName('button');
     if (this.selectedSite) {
       const previousId = this.selectedSite.id;
       list[previousId].classList.toggle('active');
@@ -36,9 +35,8 @@ export class HomeComponent implements OnInit {
   }
 
   selectProject(id: number) {
-    const list = document.getElementsByClassName('menu')[1]
-      .getElementsByTagName('ul')[0]
-      .getElementsByTagName('li');
+    const list = document.getElementsByClassName('btn-group-vertical')[1]
+      .getElementsByTagName('button');
     if (this.selectedProject) {
       const previousId = this.selectedProject.id;
       list[previousId].classList.toggle('active');
