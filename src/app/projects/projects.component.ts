@@ -11,6 +11,7 @@ import {ProjectsService} from '@projects/projects.service';
 export class ProjectsComponent implements OnInit {
   project: Project;
   id: number;
+  isLoading = false;
 
   constructor(private ps: ProjectsService,
               private route: ActivatedRoute) { }
@@ -25,6 +26,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   onClick(url: string) {
+    this.isLoading = true;
     window.location.href = 'https://' + url;
   }
 }

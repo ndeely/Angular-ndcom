@@ -33,10 +33,16 @@
         <img *ngIf="selectedSite" src="{{ selectedSite.imagePath }}" alt="{{ selectedSite.name }}" />
       </div>
     </div>
-    <div class="row">
+    <div *ngIf="selectedSite" class="row">
       <div class="desc col-xs-12 col-md-12">
-        <p *ngIf="selectedSite" [innerHTML]="selectedSite.desc"></p>
-        <button *ngIf="selectedSite" class="btn btn-primary" (click)="onClick(selectedSite.urlPath)">View Website</button>
+        <p [innerHTML]="selectedSite.desc"></p>
+        <div *ngIf="isLoading" style="text-align: center;">
+          <app-loading-spinner></app-loading-spinner>
+        </div>
+        <div *ngIf="!isLoading">
+        <button class="btn btn-primary" (click)="onClick(selectedSite.urlPaths[0])">View Website</button>
+        <button *ngIf="selectedSite.urlPaths.length > 1" class="btn btn-primary" (click)="onClick(selectedSite.urlPaths[1])"><i class="fa fa-github"></i> View GitHub Repository</button>
+        </div>
       </div>
     </div>
   </div>
@@ -73,13 +79,17 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div *ngIf="selectedProject" class="row">
       <div class="desc col-xs-12 col-md-12">
-        <p *ngIf="selectedProject" [innerHTML]="selectedProject.desc"></p>
-        <button
-          *ngIf="selectedProject"
-          class="btn btn-primary"
-          (click)="onClick(selectedProject.urlPath)"><i class="fa fa-github"></i> View GitHub Repository</button>
+        <p [innerHTML]="selectedProject.desc"></p>
+        <div *ngIf="isLoading" style="text-align: center;">
+          <app-loading-spinner></app-loading-spinner>
+        </div>
+        <div *ngIf="!isLoading">
+          <button
+            class="btn btn-primary"
+            (click)="onClick(selectedProject.urlPath)"><i class="fa fa-github"></i> View GitHub Repository</button>
+        </div>
       </div>
     </div>
   </div>

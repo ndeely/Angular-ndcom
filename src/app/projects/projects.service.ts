@@ -17,13 +17,16 @@ export class ProjectsService {
       '<h4>Framed</h4>' +
       '<p>Framed is a simple game where you must turn on all of the lights in a 3x3 grid to win. However, switching ' +
       'a light will also affect the lights directly above, below, or to the side of the light that was switched.</p>' +
-      '<h4>Guess My Color</h4>' +
-      '<p>With Guess My Color, the aim of the game is to turn your color cube to the color of the cube next to it. ' +
-      'This can be done by adding or removing the colors red, green and blue until you find a match.</p>'
+      '<h4>Maze Generator</h4>' +
+      '<p>Maze generator build a maze that you can navigate the green ball through to get to the finish line (red ball). ' +
+      'Movement controls are shown prior to the first play.</p>' +
+      '<h5>Movement</h5>' +
+      '<p>Up: "W" or Up Arrow Key<br>Down: "S" or Down Arrow Key<br>Left: "A" or Left Arrow Key<br>Right: "D" or Right Arrow Key<br></p>'
       ,
       [
         '/assets/images/DIYGames/WatchYourStep.png',
         '/assets/images/DIYGames/Framed.png',
+        '/assets/images/DIYGames/MazeGenerator.png',
         '/assets/images/DIYGames/GuessMyColor.png'
       ],
       'github.com/ndeely/DIYGames'

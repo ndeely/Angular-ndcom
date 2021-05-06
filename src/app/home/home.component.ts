@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   selectedProject: Project = null;
   sites: Website[];
   projects: Project[];
+  isLoading = false;
 
   constructor(private ws: WebsitesService,
               private ps: ProjectsService) { }
@@ -46,6 +47,7 @@ export class HomeComponent implements OnInit {
   }
 
   onClick(url: string) {
+    this.isLoading = true;
     window.location.href = 'https://' + url;
   }
 

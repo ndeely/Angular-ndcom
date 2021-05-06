@@ -23,7 +23,7 @@ export class WebsitesService {
       'some limitations. It does not allow me to store user images or videos to limit the server space that I use, and it can ' +
       'be slow to load the site initially.</p>',
       'assets/images/rubyonrails.png',
-      'guarded-meadow-50667.herokuapp.com'
+      ['guarded-meadow-50667.herokuapp.com', 'github.com/ndeely/FriendMeter']
     ),
     new Website(
       1,
@@ -44,7 +44,7 @@ export class WebsitesService {
       'I began learning about the viability of other frameworks such as Angular and Laravel.</p>' +
       '<p>Below, you can find a link to another example website I have made using Angular.</p>',
       'assets/images/angular.png',
-      'www.nialldeely.com/angular'
+      ['www.nialldeely.com/angular', 'github.com/ndeely/Angular-Ingredients-Shop']
     ),
     new Website(
       2,
@@ -56,7 +56,7 @@ export class WebsitesService {
       'and plugins to use this CMS to it\'s full potential.</p>' +
       '<p>Below, you can find a link to an example website I have made using WordPress.</p>',
       'assets/images/wordpress.png',
-      'www.nialldeely.com/wp'
+      ['www.nialldeely.com/wp']
     ),
     new Website(
       3,
@@ -69,7 +69,7 @@ export class WebsitesService {
       'MVC frameworks such as Ruby on Rails and Angular.</p>' +
       '<p>Below, you can find a link to an example website I have made using Laravel.</p>',
       'assets/images/laravel.png',
-      'www.nialldeely.com/laravel'
+      ['www.nialldeely.com/laravel']
     )
   ];
 

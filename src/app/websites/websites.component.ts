@@ -11,6 +11,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 export class WebsitesComponent implements OnInit {
   site: Website;
   id: number;
+  isLoading = false;
 
   constructor(private ws: WebsitesService,
               private route: ActivatedRoute) { }
@@ -25,6 +26,7 @@ export class WebsitesComponent implements OnInit {
   }
 
   onClick(url: string) {
+    this.isLoading = true;
     window.location.href = 'https://' + url;
   }
 
