@@ -28,6 +28,7 @@ export class WebsitesComponent implements OnInit {
   onClick(url: string) {
     this.isLoading = true;
     window.location.href = 'https://' + url;
+    setTimeout(() => { this.isLoading = false; }, 1000);
   }
 
 }
