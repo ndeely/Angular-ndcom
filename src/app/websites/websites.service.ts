@@ -35,7 +35,7 @@ export class WebsitesService {
       '<div class="row">' +
       '<div class="col-xs-12">' +
       '<a class="btn btn-primary" href="https://github.com/ndeely/Angular-ndcom" target="_blank">' +
-      '<i class="fa fa-github"></i> View Project' +
+      '<i class="fa fa-github"></i> View GitHub Repository' +
       '</a>' +
       '</div>' +
       '</div>' +

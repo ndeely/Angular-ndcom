@@ -25,8 +25,9 @@ export class ProjectsService {
       ,
       [
         '/assets/images/DIYGames/WatchYourStep.png',
-        '/assets/images/DIYGames/Framed.png',
         '/assets/images/DIYGames/MazeGenerator.png',
+        '/assets/images/DIYGames/Framed.png',
+        '/assets/images/DIYGames/SlidingTiles.png',
         '/assets/images/DIYGames/GuessMyColor.png'
       ],
       'github.com/ndeely/DIYGames'
