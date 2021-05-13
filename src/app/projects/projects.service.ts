@@ -28,7 +28,8 @@ export class ProjectsService {
         '/assets/images/DIYGames/MazeGenerator.png',
         '/assets/images/DIYGames/Framed.png',
         '/assets/images/DIYGames/SlidingTiles.png',
-        '/assets/images/DIYGames/GuessMyColor.png'
+        '/assets/images/DIYGames/GuessMyColor.png',
+        '/assets/images/DIYGames/ZilchDiceGame.png'
       ],
       'github.com/ndeely/DIYGames'
     ),
