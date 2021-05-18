@@ -46,31 +46,31 @@ export class WebsitesService {
       'assets/images/angular.png',
       ['www.nialldeely.com/angular', 'github.com/ndeely/Angular-Ingredients-Shop']
     ),
-    new Website(
-      2,
-      'WordPress',
-      '<p>WordPress is a free and open-source content management system (CMS) written in PHP and paired ' +
-      'with a MySQL or MariaDB database. WordPress is one of the most popular CMSs available and is used by ' +
-      'millions of websites globally.</p>' +
-      '<p>I have worked with WordPress as a Web Developer for over 3 years, and have created custom templates ' +
-      'and plugins to use this CMS to it\'s full potential.</p>' +
-      '<p>Below, you can find a link to an example website I have made using WordPress.</p>',
-      'assets/images/wordpress.png',
-      ['www.nialldeely.com/wp']
-    ),
-    new Website(
-      3,
-      'Laravel',
-      '<p>Laravel is a free, open-source PHP web framework intended for the development of web applications following the ' +
-      'model–view–controller (MVC) architectural pattern.</p>' +
-      '<p>While I do not have formal work experience using Laravel, I have begun working with it for projects and have ' +
-      'adapted to it very quickly. This is primarily due to my familiarity with PHP through working with WordPress as a ' +
-      'web developer for several years, and my familiarity with MVC frameworks from working on projects built using other ' +
-      'MVC frameworks such as Ruby on Rails and Angular.</p>' +
-      '<p>Below, you can find a link to an example website I have made using Laravel.</p>',
-      'assets/images/laravel.png',
-      ['www.nialldeely.com/laravel']
-    )
+    // new Website(
+    //   2,
+    //   'WordPress',
+    //   '<p>WordPress is a free and open-source content management system (CMS) written in PHP and paired ' +
+    //   'with a MySQL or MariaDB database. WordPress is one of the most popular CMSs available and is used by ' +
+    //   'millions of websites globally.</p>' +
+    //   '<p>I have worked with WordPress as a Web Developer for over 3 years, and have created custom templates ' +
+    //   'and plugins to use this CMS to it\'s full potential.</p>' +
+    //   '<p>Below, you can find a link to an example website I have made using WordPress.</p>',
+    //   'assets/images/wordpress.png',
+    //   ['www.nialldeely.com/wp']
+    // ),
+    // new Website(
+    //   3,
+    //   'Laravel',
+    //   '<p>Laravel is a free, open-source PHP web framework intended for the development of web applications following the ' +
+    //   'model–view–controller (MVC) architectural pattern.</p>' +
+    //   '<p>While I do not have formal work experience using Laravel, I have begun working with it for projects and have ' +
+    //   'adapted to it very quickly. This is primarily due to my familiarity with PHP through working with WordPress as a ' +
+    //   'web developer for several years, and my familiarity with MVC frameworks from working on projects built using other ' +
+    //   'MVC frameworks such as Ruby on Rails and Angular.</p>' +
+    //   '<p>Below, you can find a link to an example website I have made using Laravel.</p>',
+    //   'assets/images/laravel.png',
+    //   ['www.nialldeely.com/laravel']
+    // )
   ];
 
   constructor() {
