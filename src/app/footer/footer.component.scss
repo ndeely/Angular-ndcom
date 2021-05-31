@@ -6,27 +6,16 @@ footer {
 h5 {
   font-weight: bold;
   color: #fff;
-}
-
-h5, ul {
-  text-align: left;
+  text-align: center;
 }
 
 ul {
-  list-style:none;
-}
-
-ul.list-styled li:before {
-  content: "\2022";
-  color: #fff;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-ul.list-styled li a {
-  color: #fff;
+  list-style-type: none;
+  text-align: center;
+  padding: 0px;
+  li a {
+    color: #FFF;
+  }
 }
 
 button {

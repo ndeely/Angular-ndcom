@@ -27,6 +27,10 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active, ul.navbar-nav li a:focus, l
   background-color: #1890FF;
 }
 
+ul.dropdown-menu {
+  margin-top: -1px;
+}
+
 ul.dropdown-menu p {
   text-align: center;
 }
