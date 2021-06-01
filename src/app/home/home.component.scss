@@ -2,14 +2,12 @@
   margin:0px;
 }
 
-.container {
-  margin: 10px 0px;
-  border: 2px solid #001529;
-  border-radius: 12px;
-  background-color: #001529;
-  h2 {
-    padding: 10px;
-  }
+hr {
+  margin:10px 0px;
+}
+
+.container h2 {
+  padding: 10px;
 }
 
 .introText {
@@ -45,16 +43,21 @@
 
 .projectImage img {
   max-height: 250px;
-  display: inline;
 }
 
 .siteImage img, .projectImage img {
   max-width: 95%;
+  margin: 0px 5px 5px 0px;
 }
 
-.siteImage img.img-thumbnail, .projectImage img {
-  margin: 0px 5px 5px 0px;
+.siteImage img.img-thumbnail {
   max-width:48%;
+}
+
+p.projectTitle {
+  color: #FFF;
+  font-weight: bold;
+  padding: 5px;
 }
 
 .desc {

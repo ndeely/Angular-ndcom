@@ -5,6 +5,7 @@
       that I have completed in a range of programming languages.</p>
   </div>
 </div>
+<hr>
 <div class="container">
   <h2>Websites</h2>
   <div class="sites">
@@ -46,6 +47,7 @@
     </div>
   </div>
 </div>
+<hr>
 <div class="container">
   <h2>Projects</h2>
   <div class="projects">
@@ -60,19 +62,21 @@
       <div class="projectImage col-xs-12 col-md-8">
         <div *ngIf="!selectedProject">
           <span *ngFor="let project of projects">
-            <a *ngIf="project.imagePaths.length > 0" (click)="selectProject(project.id)">
-              <img
-                *ngFor="let imagePath of project.imagePaths"
-                src="{{ imagePath }}" alt="{{ project.name }}"
-              />
-            </a>
+            <div *ngIf="project.imagePaths.length > 0">
+              <p class="projectTitle">{{ project.name }}</p>
+              <a (click)="selectProject(project.id)">
+                <div class="slideshow-container">
+                  <img *ngFor="let imgPath of project.imagePaths" class="mySlides" src="{{ imgPath }}" alt="{{ project.name }}">
+                </div>
+              </a>
+            </div>
+
           </span>
         </div>
         <div *ngIf="selectedProject && selectedProject.imagePaths.length > 0">
-          <img
-          *ngFor="let imagePath of selectedProject.imagePaths"
-          src="{{ imagePath }}"
-          alt="{{ selectedProject.name }}" />
+          <div class="slideshow-container">
+            <img *ngFor="let imgPath of selectedProject.imagePaths" class="mySlides" src="{{ imgPath }}" alt="{{ selectedProject.name }}">
+          </div>
         </div>
       </div>
     </div>

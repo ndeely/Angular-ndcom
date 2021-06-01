@@ -25,18 +25,16 @@
 						"aot": true,
 						"assets": [
 							"src/favicon.ico",
-							"src/assets",
-							{
-								"glob": "**/*",
-								"input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-								"output": "/assets/"
-							}
+							"src/assets"
 						],
 						"styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-							"src/styles.scss"
+							"src/styles.scss",
+              "src/assets/css/slideshow.css"
 						],
-						"scripts": []
+						"scripts": [
+              "src/assets/js/slideshow.js"
+            ]
 					},
 					"configurations": {
 						"production": {
