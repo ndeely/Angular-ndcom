@@ -7,21 +7,59 @@ export class ProjectsService {
   private projects: Project[] = [
     new Project(
       0,
-      'Java DIY Games',
+      'Java JFrame Games',
       ['Java', 'JFrame'],
       'This repository contains a number of Java JFrame games I have created as a learning experience.<br><br>' +
       'The notable inclusions are:<br>' +
+      '<div class="col-xs-12 col-md-4">' +
+      '<div class="project-brief">' +
       '<h4>Watch Your Step</h4>' +
+      '<img src="/assets/images/DIYGames/WatchYourStep.png" alt="Watch Your Step">' +
       '<p>Watch Your Step is a Minesweeper clone which allows you to try to expose all of the squares without ' +
       'falling into a hole. Suspected holes can be marked with a skull and crossbones.</p>' +
-      '<h4>Framed</h4>' +
-      '<p>Framed is a simple game where you must turn on all of the lights in a 3x3 grid to win. However, switching ' +
-      'a light will also affect the lights directly above, below, or to the side of the light that was switched.</p>' +
+      '</div>' +
+      '</div>' +
+      '<div class="col-xs-12 col-md-4">' +
+      '<div class="project-brief">' +
       '<h4>Maze Generator</h4>' +
+      '<img src="/assets/images/DIYGames/MazeGenerator.png" alt="Maze Generator">' +
       '<p>Maze generator build a maze that you can navigate the green ball through to get to the finish line (red ball). ' +
       'Movement controls are shown prior to the first play.</p>' +
-      '<h5>Movement</h5>' +
-      '<p>Up: "W" or Up Arrow Key<br>Down: "S" or Down Arrow Key<br>Left: "A" or Left Arrow Key<br>Right: "D" or Right Arrow Key<br></p>'
+      '</div>' +
+      '</div>' +
+      '<div class="col-xs-12 col-md-4">' +
+      '<div class="project-brief">' +
+      '<h4>Framed</h4>' +
+      '<img src="/assets/images/DIYGames/Framed.png" alt="Framed">' +
+      '<p>Framed is a simple game where you must turn on all of the lights in a 3x3 grid to win. However, switching ' +
+      'a light will also affect the lights directly above, below, or to the side of the light that was switched.</p>' +
+      '</div>' +
+      '</div>' +
+      '<div class="col-xs-12 col-md-4">' +
+      '<div class="project-brief">' +
+      '<h4>Sliding Tiles</h4>' +
+      '<img src="/assets/images/DIYGames/SlidingTiles.png" alt="Sliding Tiles">' +
+      '<p>The aim of Sliding Tiles is to put the pieces of a photo into the correct place, by moving the tiles into the empty space ' +
+      'in a 4x4 grid.</p>' +
+      '</div>' +
+      '</div>' +
+      '<div class="col-xs-12 col-md-4">' +
+      '<div class="project-brief">' +
+      '<h4>Guess My Color</h4>' +
+      '<img src="/assets/images/DIYGames/GuessMyColor.png" alt="Guess My Color">' +
+      '<p>Guess My Color simply involves increasing or decreasing the concentration of the colors red, green and blue until you reach ' +
+      'the target color.</p>' +
+      '</div>' +
+      '</div>' +
+      '<div class="col-xs-12 col-md-4">' +
+      '<div class="project-brief">' +
+      '<h4>Zilch Dice Game</h4>' +
+      '<img src="/assets/images/DIYGames/ZilchDiceGame.png" alt="Zilch Dice Game">' +
+      '<p>Zilch is a game of chance, where 6 dice are rolled to determine points. If the result offers no points, a round is over. If ' +
+      'some combination of dice awards points, these dice can be selected to claim the points, and the remaining dice can be re-rolled. ' +
+      'If all rolled dice award points, they can all be selected, and all of the dice are re-rolled.</p>' +
+      '</div>' +
+      '</div>'
       ,
       [
         '/assets/images/DIYGames/WatchYourStep.png',
@@ -56,7 +94,9 @@ export class ProjectsService {
       ['Java', 'Android'],
       'AAAChat is a simple chat app interface created using Android Studio and Java. ' +
       'The interface created is similar in style to WhatsApp.',
-      [],
+      [
+        '/assets/images/AAAChat.png'
+      ],
       'github.com/ndeely/AAAChat'
     ),
     new Project(
@@ -103,7 +143,9 @@ export class ProjectsService {
       'be most familiar with.</p>' +
       '<p>I will not include solutions to the problems #100+, as the creators of the project do not wish to have solutions to ' +
       'the more complicated problems shared.</p>',
-      [],
+      [
+        '/assets/images/ProjectEuler.png'
+      ],
       'github.com/ndeely/Project-Euler'
     )
   ];

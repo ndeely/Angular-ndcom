@@ -62,11 +62,14 @@
       <div class="projectImage col-xs-12 col-md-8">
         <div *ngIf="!selectedProject">
           <span *ngFor="let project of projects">
-            <div *ngIf="project.imagePaths.length > 0">
+            <div *ngIf="project.imagePaths.length > 0" class="col-xs-12 col-md-4">
               <p class="projectTitle">{{ project.name }}</p>
               <a (click)="selectProject(project.id)">
-                <div class="slideshow-container">
+                <div *ngIf="project.imagePaths.length > 1" class="slideshow-container">
                   <img *ngFor="let imgPath of project.imagePaths" class="mySlides" src="{{ imgPath }}" alt="{{ project.name }}">
+                </div>
+                <div *ngIf="project.imagePaths.length == 1">
+                  <img *ngFor="let imgPath of project.imagePaths" src="{{ imgPath }}" alt="{{ project.name }}">
                 </div>
               </a>
             </div>
@@ -74,13 +77,25 @@
           </span>
         </div>
         <div *ngIf="selectedProject && selectedProject.imagePaths.length > 0">
-          <div class="slideshow-container">
+          <div  *ngIf="selectedProject.imagePaths.length > 1" class="slideshow-container">
             <img *ngFor="let imgPath of selectedProject.imagePaths" class="mySlides" src="{{ imgPath }}" alt="{{ selectedProject.name }}">
+          </div>
+          <div *ngIf="selectedProject.imagePaths.length == 1">
+            <img *ngFor="let imgPath of selectedProject.imagePaths" src="{{ imgPath }}" alt="{{ selectedProject.name }}">
           </div>
         </div>
       </div>
     </div>
     <div *ngIf="selectedProject" class="row">
+      <div class="row" style="margin-bottom:10px;">
+        <div class="col-xs-12">
+          <span class="tags">Tags: </span>
+          <span *ngFor="let tag of selectedProject.tags">
+        <a routerLink="/category/{{tag}}">
+        <span class="badge">{{tag}}</span></a>&nbsp;
+      </span>
+        </div>
+      </div>
       <div class="desc col-xs-12 col-md-12">
         <p [innerHTML]="selectedProject.desc"></p>
         <div *ngIf="isLoading" style="text-align: center;">
