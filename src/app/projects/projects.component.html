@@ -16,7 +16,9 @@
   <div class="row">
     <div class="col-xs-12">
       <div *ngIf="project.imagePaths.length > 1" class="slideshow-container">
-        <img *ngFor="let imgPath of project.imagePaths" class="mySlides" src="{{imgPath}}">
+        <div *ngFor="let imgPath of project.imagePaths" class="mySlides">
+          <img src="{{ imgPath }}" alt="{{ project.name }}">
+        </div>
       </div>
       <div *ngIf="project.imagePaths.length == 1">
         <img *ngFor="let imgPath of project.imagePaths" src="{{ imgPath }}" alt="{{ project.name }}">

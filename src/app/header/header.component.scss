@@ -8,9 +8,12 @@
 
 .navbar-brand {
   padding:10px 10px;
+  display: flex;
   img {
-    display: inline;
     max-width: 30px;
+  }
+  span {
+    padding: 4px;
   }
 }
 

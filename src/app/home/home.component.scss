@@ -6,28 +6,38 @@ hr {
   margin:10px 0px;
 }
 
-.container h2 {
-  padding: 10px;
+.intro {
+  background-color: #001529;
+}
+
+.container {
+  background-color: midnightblue;
+  width: 96%;
+  margin: 0 2%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.7);
+
+  h1, h2, h3 {
+    padding: 10px;
+    color: #fff;
+  }
 }
 
 .introText {
   width: 100%;
   padding: 20px;
+  border-radius: 0px;
   p {
     padding:10px 40px;
   }
 }
 
-.sites, .projects {
-  background-color:#001529;
-}
-
 .menu {
   padding:5px;
   .btn-group-vertical {
+    box-shadow: 0 0 5px #fff;
     width: 100%;
     button {
-      background-color:#001529;
+      background-color: darkblue;
       &:hover, &.active {
         background-color: #1890FF;
       }
@@ -38,16 +48,19 @@ hr {
 .siteImage img {
   max-height: 300px;
   display: block;
-  margin:auto;
 }
 
 .projectImage img {
   max-height: 250px;
 }
 
-.siteImage img, .projectImage img {
-  max-width: 95%;
-  margin: 0px 5px 5px 0px;
+.siteImage, .projectImage {
+  text-align: center;
+  img {
+    max-width: 95%;
+    margin: 0px 5px 5px 0px;
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
+  }
 }
 
 .siteImage img.img-thumbnail {
@@ -79,5 +92,12 @@ button {
   .btn, a.btn {
     display: block;
     margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 90%;
+    margin: 0 5%;
   }
 }
