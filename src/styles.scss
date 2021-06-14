@@ -65,6 +65,9 @@ blockquote p {
 .project-brief {
   background-color: aliceblue;
   border-top:5px solid #1890FF;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
 
   * {
     padding: 5px 50px;
@@ -78,7 +81,6 @@ blockquote p {
     max-height: 300px;
     width: auto;
     max-width: 90%;
-    margin: 0px 10%;
 
   }
 
