@@ -23,7 +23,7 @@ export class WebsitesService {
       'some limitations. It does not allow me to store user images or videos to limit the server space that I use, and it can ' +
       'be slow to load the site initially.</p>',
       'assets/images/rubyonrails.png',
-      ['guarded-meadow-50667.herokuapp.com', 'github.com/ndeely/FriendMeter']
+      ['github.com/ndeely/FriendMeter', 'guarded-meadow-50667.herokuapp.com']
     ),
     new Website(
       1,
@@ -44,10 +44,21 @@ export class WebsitesService {
       'I began learning about the viability of other frameworks such as Angular and Laravel.</p>' +
       '<p>Below, you can find a link to another example website I have made using Angular.</p>',
       'assets/images/angular.png',
-      ['www.nialldeely.com/angular', 'github.com/ndeely/Angular-Ingredients-Shop']
+      ['github.com/ndeely/Angular-Ingredients-Shop', 'www.nialldeely.com/angular']
+    ),
+    new Website(
+      2,
+      'NodeJS',
+      '<p>Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that can be used to build ' +
+      'websites and applications.</p>' +
+      '<p>I have recently began working with NodeJS to learn the fundamentals using a complete guide to the framework. I am still ' +
+      'progressing through this course, so I have not added a link the completed website to this site yet. However, you can visit ' +
+      'the GitHub repository for this project using the button below.</p>',
+      'assets/images/nodejs.png',
+      ['github.com/ndeely/nodejs-complete-guide']
     ),
     // new Website(
-    //   2,
+    //   3,
     //   'WordPress',
     //   '<p>WordPress is a free and open-source content management system (CMS) written in PHP and paired ' +
     //   'with a MySQL or MariaDB database. WordPress is one of the most popular CMSs available and is used by ' +
@@ -59,7 +70,7 @@ export class WebsitesService {
     //   ['www.nialldeely.com/wp']
     // ),
     // new Website(
-    //   3,
+    //   4,
     //   'Laravel',
     //   '<p>Laravel is a free, open-source PHP web framework intended for the development of web applications following the ' +
     //   'model–view–controller (MVC) architectural pattern.</p>' +

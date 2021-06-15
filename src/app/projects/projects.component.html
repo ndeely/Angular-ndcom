@@ -21,7 +21,9 @@
         </div>
       </div>
       <div *ngIf="project.imagePaths.length == 1">
-        <img *ngFor="let imgPath of project.imagePaths" src="{{ imgPath }}" alt="{{ project.name }}">
+        <div>
+          <img *ngFor="let imgPath of project.imagePaths" src="{{ imgPath }}" alt="{{ project.name }}">
+        </div>
       </div>
     </div>
   </div>
