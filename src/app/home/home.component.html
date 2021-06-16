@@ -98,7 +98,7 @@
       </div>
       <div class="desc col-xs-12 col-md-12">
         <p [innerHTML]="selectedProject.desc"></p>
-        <div *ngIf="isLoading" style="text-align: center;">
+        <div *ngIf="isLoading" style="text-align: center; clear: both;">
           <app-loading-spinner></app-loading-spinner>
         </div>
         <div *ngIf="!isLoading">
