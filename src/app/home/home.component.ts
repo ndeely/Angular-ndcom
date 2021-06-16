@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   selectSite(id: number) {
-    const list = document.getElementsByClassName('btn-group-vertical')[0]
+    const list = document.getElementsByClassName('menu')[0]
       .getElementsByTagName('button');
     if (this.selectedSite) {
       const previousId = this.selectedSite.id;
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
   }
 
   selectProject(id: number) {
-    const list = document.getElementsByClassName('btn-group-vertical')[1]
+    const list = document.getElementsByClassName('menu')[1]
       .getElementsByTagName('button');
     if (this.selectedProject) {
       const previousId = this.selectedProject.id;

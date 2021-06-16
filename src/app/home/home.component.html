@@ -10,14 +10,12 @@
   <h2>Websites</h2>
   <div class="sites">
     <div class="row">
-      <div class="menu col-xs-12 col-md-4">
-        <div class="btn-group-vertical btn-group-lg">
-            <button *ngFor="let site of sites" class="btn btn-info" (click)="selectSite(site.id)">
-              {{ site.name }}
-            </button>
-        </div>
+      <div class="menu col-xs-12">
+        <button *ngFor="let site of sites" (click)="selectSite(site.id)">
+          {{ site.name }}
+        </button>
       </div>
-      <div class="siteImage col-xs-12 col-md-8">
+      <div class="siteImage col-xs-12">
         <div *ngIf="!selectedSite">
           <span *ngFor="let site of sites">
             <a (click)="selectSite(site.id)">
@@ -34,7 +32,7 @@
       </div>
     </div>
     <div *ngIf="selectedSite" class="row">
-      <div class="desc col-xs-12 col-md-12">
+      <div class="desc col-xs-12">
         <p [innerHTML]="selectedSite.desc"></p>
         <div *ngIf="isLoading" style="text-align: center;">
           <app-loading-spinner></app-loading-spinner>
@@ -52,14 +50,12 @@
   <h2>Projects</h2>
   <div class="projects">
     <div class="row">
-      <div class="menu col-xs-12 col-md-4">
-        <div class="btn-group-vertical btn-group-lg">
-          <button *ngFor="let project of projects" class="btn btn-info" (click)="selectProject(project.id)">
-            {{ project.name }}
-          </button>
-        </div>
+      <div class="menu col-xs-12">
+        <button *ngFor="let project of projects" (click)="selectProject(project.id)">
+          {{ project.name }}
+        </button>
       </div>
-      <div class="projectImage col-xs-12 col-md-8">
+      <div class="projectImage col-xs-12">
         <div *ngIf="!selectedProject">
           <span *ngFor="let project of projects">
             <div *ngIf="project.imagePaths.length > 0" class="single-project col-xs-12 col-md-4">
