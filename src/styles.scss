@@ -49,13 +49,27 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote p {
   display: inline;
+}
+
+.centered {
+  text-align: center;
+}
+
+.clear {
+  clear: both;
 }
 
 .container, .col-md-12 {
   width: 100%;
   padding: 0px;
+
+  img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
 }
 
 .row {
@@ -69,7 +83,7 @@ blockquote p {
   margin: 10px;
   padding: 5px;
 
-  * {
+  h4, p {
     padding: 5px 50px;
   }
 
@@ -81,11 +95,25 @@ blockquote p {
     max-height: 300px;
     width: auto;
     max-width: 90%;
-
+    margin: 0px 5%;
   }
 
   p {
     color: black;
+  }
+}
+
+.badge {
+  padding: 5px 30px;
+  margin: 5px;
+  border: 1px solid #777;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  .badge {
+    background-color: #fff;
+    color: #777;
   }
 }
 
@@ -99,10 +127,9 @@ blockquote p {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .project-brief img {
-    margin: 0px 5%;
-  }
+.button-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 

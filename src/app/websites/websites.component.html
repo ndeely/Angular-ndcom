@@ -19,10 +19,10 @@
     </div>
   </div>
   <div class="row">
-    <div *ngIf="isLoading" style="text-align: center;">
+    <div *ngIf="isLoading" class="centered">
       <app-loading-spinner></app-loading-spinner>
     </div>
-    <div *ngIf="!isLoading" class="button-container col-xs-12">
+    <div *ngIf="!isLoading" class="button-container clear">
       <button *ngIf="site.urlPaths.length > 1" class="btn btn-primary" (click)="onClick(site.urlPaths[1])">View Website</button>
       <button *ngIf="site.urlPaths.length > 0" class="btn btn-primary" (click)="onClick(site.urlPaths[0])"><i class="fa fa-github"></i> View GitHub Repository</button>
     </div>
