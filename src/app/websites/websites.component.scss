@@ -7,5 +7,10 @@ img {
 }
 
 button {
-  margin:10px;
+  margin:10px auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
 }

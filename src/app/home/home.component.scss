@@ -4,31 +4,25 @@
 
 hr {
   margin:10px 0px;
+  clear: both;
 }
 
-.intro {
-  background-color: #001529;
-}
-
-.container {
-  background-color: midnightblue;
+.content {
   width: 96%;
   margin: 0 2%;
-  box-shadow: 0 0 5px rgba(0,0,0,0.7);
-
   h1, h2, h3 {
     padding: 10px;
-    color: #fff;
   }
 }
 
-.introText {
+.intro p {
   width: 100%;
   padding: 20px;
   border-radius: 0px;
-  p {
-    padding:10px 40px;
-  }
+  background-color: #eee;
+  font-size: 20px;
+  padding:10px 40px;
+  margin: 10px 0px;
 }
 
 .menu {
@@ -42,7 +36,7 @@ hr {
     padding: 8px;
     min-width: 15%;
     border: 1px solid #fff;
-    border-bottom: 5px solid #fff;
+    border-bottom: 5px solid cyan;
     &:hover, &.active {
       background-color: #f0f8ff;
       border-bottom: 5px solid #1890ff;
@@ -74,7 +68,6 @@ hr {
 }
 
 p.projectTitle {
-  color: #FFF;
   font-weight: bold;
   padding: 5px;
 }
@@ -89,7 +82,6 @@ button {
 
 .desc {
   p {
-    color: #fff;
     padding: 5px 10px;
     blockquote {
       background-color: transparent;
@@ -110,7 +102,9 @@ button {
     width: 100%;
     margin: 10px 0;
     button {
-      min-width:50%;
+      min-width:90%;
+      margin: 0px 5%;
+      display: block;
     }
   }
   .siteImage img.img-thumbnail {
