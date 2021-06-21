@@ -29,6 +29,8 @@ hr {
   width: 90%;
   margin: 10px 5%;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
   button {
     background-color: darkblue;
     color: #fff;
@@ -103,6 +105,7 @@ button {
   .menu {
     width: 100%;
     margin: 10px 0;
+    display: block;
     button {
       min-width:90%;
       margin: 0px 5%;
