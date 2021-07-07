@@ -1,5 +1,4 @@
 <div class="content intro">
-  <h1>Portfolio</h1>
   <p class="col-xs-10 col-xs-offset-1">This website showcases some example websites I am working on using various frameworks, and some projects
     that I have completed in a range of programming languages.</p>
 </div>
@@ -15,14 +14,18 @@
       </div>
       <div class="siteImage col-xs-12">
         <div *ngIf="!selectedSite">
-          <span *ngFor="let site of sites">
-            <a (click)="selectSite(site.id)">
-              <img
-                src="{{ site.imagePath }}"
-                alt="{{ site.name }}"
-              />
-            </a>
-          </span>
+          <div class="slideshow-container">
+            <span *ngFor="let site of sites" class="mySlides2">
+              <h3>{{ site.name }}</h3>
+              <a (click)="selectSite(site.id)">
+                <img
+                  src="{{ site.imagePath }}"
+                  alt="{{ site.name }}"
+                />
+              </a>
+            </span>
+          </div>
+          <div class="clear"></div>
         </div>
         <img *ngIf="selectedSite" src="{{ selectedSite.imagePath }}" alt="{{ selectedSite.name }}" />
       </div>
@@ -56,22 +59,22 @@
           <span *ngFor="let project of projects">
             <div *ngIf="project.imagePaths.length > 0" class="single-project col-xs-12 col-md-4">
               <h3 class="projectTitle">{{ project.name }}</h3>
-              <a (click)="selectProject(project.id)">
                 <div *ngIf="project.imagePaths.length > 1" class="slideshow-container">
                   <div *ngFor="let imgPath of project.imagePaths" class="mySlides">
-                    <img src="{{ imgPath }}" alt="{{ project.name }}">
+                    <a (click)="selectProject(project.id)">
+                      <img src="{{ imgPath }}" alt="{{ project.name }}">
+                    </a>
                   </div>
                 </div>
                 <div *ngIf="project.imagePaths.length == 1">
                   <img *ngFor="let imgPath of project.imagePaths" src="{{ imgPath }}" alt="{{ project.name }}">
                 </div>
-              </a>
             </div>
 
           </span>
         </div>
         <div *ngIf="selectedProject && selectedProject.imagePaths.length > 0">
-          <div  *ngIf="selectedProject.imagePaths.length > 1" class="slideshow-container">
+          <div  *ngIf="selectedProject.imagePaths.length > 1" class="slideshow-container h300">
             <div *ngFor="let imgPath of selectedProject.imagePaths" class="mySlides">
               <img src="{{ imgPath }}" alt="{{ selectedProject.name }}">
             </div>

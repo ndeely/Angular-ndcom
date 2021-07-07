@@ -32,17 +32,20 @@ hr {
   display: flex;
   justify-content: space-between;
   button {
-    background-color: darkblue;
+    background-color: cadetblue;
     color: #fff;
     font-size: large;
     padding: 8px;
+    margin: 5px;
     min-width: 15%;
     border: 1px solid #fff;
     border-bottom: 5px solid cyan;
+    border-radius: 25px;
     &:hover, &.active {
       background-color: #f0f8ff;
       border-bottom: 5px solid #1890ff;
       color: #005bea;
+      transition: 0.3s ease-in-out;
     }
   }
 }
@@ -108,7 +111,7 @@ button {
     display: block;
     button {
       min-width:90%;
-      margin: 0px 5%;
+      margin: 5px 5%;
       display: block;
     }
   }

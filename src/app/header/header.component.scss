@@ -41,6 +41,7 @@ ul.navbar-nav li {
   a:focus,
   &.dropdown.open a.dropdown-toggle {
     background-color: #1890FF;
+    transition: 0.3s ease-in-out;
   }
 }
 

@@ -11,13 +11,13 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown" appDropdown>
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button">Websites<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button">Websites <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li *ngFor="let site of sites"><a routerLink="websites/{{site.id}}">{{site.name}}</a></li>
           </ul>
         </li>
         <li class="dropdown" appDropdown>
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button">Projects<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button">Projects <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li *ngFor="let project of projects"><a routerLink="projects/{{project.id}}">{{project.name}}</a></li>
           </ul>
