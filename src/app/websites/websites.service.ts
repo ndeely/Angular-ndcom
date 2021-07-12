@@ -69,7 +69,7 @@ full potential.</p>
 <p class="info">I am currently working on a WordPress website to showcase my knowledge of this CMS.</p>
 `,
       'assets/images/wordpress.png',
-      []
+      ['github.com/ndeely/WordPress-Development']
     ),
     new Website(
       4,
