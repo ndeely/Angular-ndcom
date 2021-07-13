@@ -9,7 +9,7 @@
     <div class="row">
       <div class="menu col-xs-12">
         <button *ngFor="let site of sites" (click)="selectSite(site.id)">
-          {{ site.name }}<span></span>
+          {{ site.name }}<span>&nbsp;</span>
         </button>
       </div>
       <div class="siteImage col-xs-12">
@@ -51,7 +51,7 @@
     <div class="row">
       <div class="menu col-xs-12">
         <button *ngFor="let project of projects" (click)="selectProject(project.id)">
-          {{ project.name }}<span></span>
+          {{ project.name }}<span>&nbsp;</span>
         </button>
       </div>
       <div class="projectImage col-xs-12">

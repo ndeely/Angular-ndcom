@@ -1,4 +1,5 @@
 let slideIndex = 0;
+let slideIndex2 = 0;
 setTimeout(carousel, 1000);
 
 function carousel() {
@@ -19,9 +20,9 @@ function carousel() {
     for (current = 0; current < slides2.length; current++) {
       slides2[current].classList.remove('active');
     }
-    slideIndex++;
-    if (slideIndex > slides2.length) {slideIndex = 1}
-    slides2[slideIndex - 1].classList.add('active');
+    slideIndex2++;
+    if (slideIndex2 > slides2.length) {slideIndex2 = 1}
+    slides2[slideIndex2 - 1].classList.add('active');
   }
 
   setTimeout(carousel, 3000); // Change image every 3 seconds
