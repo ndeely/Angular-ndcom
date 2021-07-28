@@ -67,7 +67,9 @@
                   </div>
                 </div>
                 <div *ngIf="project.imagePaths.length == 1">
-                  <img *ngFor="let imgPath of project.imagePaths" src="{{ imgPath }}" alt="{{ project.name }}">
+                  <a (click)="selectProject(project.id)">
+                    <img *ngFor="let imgPath of project.imagePaths" src="{{ imgPath }}" alt="{{ project.name }}">
+                  </a>
                 </div>
             </div>
 

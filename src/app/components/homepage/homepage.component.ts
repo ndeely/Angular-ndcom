@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import {WebsitesService} from '@websites/websites.service';
+
+// models
 import {Website} from '@websites/website.model';
 import {Project} from '@projects/project.model';
+// services
+import {WebsitesService} from '@websites/websites.service';
 import {ProjectsService} from '@projects/projects.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './homepage.component.html',
+  styleUrls: ['./homepage.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomepageComponent implements OnInit {
   selectedSite: Website = null;
   selectedProject: Project = null;
   sites: Website[];
@@ -25,25 +28,25 @@ export class HomeComponent implements OnInit {
   }
 
   selectSite(id: number) {
-    const list = document.getElementsByClassName('menu')[0]
+    const websiteButtons = document.getElementsByClassName('menu')[0]
       .getElementsByTagName('button');
     if (this.selectedSite) {
       const previousId = this.selectedSite.id;
-      list[previousId].classList.toggle('active');
+      websiteButtons[previousId].classList.toggle('active');
     }
     this.selectedSite = this.sites[id];
-    list[id].classList.toggle('active');
+    websiteButtons[id].classList.toggle('active');
   }
 
   selectProject(id: number) {
-    const list = document.getElementsByClassName('menu')[1]
+    const projectButtons = document.getElementsByClassName('menu')[1]
       .getElementsByTagName('button');
     if (this.selectedProject) {
       const previousId = this.selectedProject.id;
-      list[previousId].classList.toggle('active');
+      projectButtons[previousId].classList.toggle('active');
     }
     this.selectedProject = this.projects[id];
-    list[id].classList.toggle('active');
+    projectButtons[id].classList.toggle('active');
   }
 
   onClick(url: string) {
