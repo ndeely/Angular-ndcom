@@ -48,9 +48,10 @@ hr {
       color: #005bea;
       background-color: transparent;
       transition: 1s ease;
+      transition: background-color 0.4s ease;
       span {
-        height: 50px;
-        width: 20rem;
+        height: 100%;
+        width: 100%;
       }
     }
     span {
@@ -132,11 +133,6 @@ button {
       min-width:90%;
       margin: 5px 5%;
       display: block;
-      &:hover, &:active, &.active {
-        span {
-          width: 100%;
-        }
-      }
     }
   }
   .siteImage img.img-thumbnail {
