@@ -9,8 +9,8 @@ import {WebsitesComponent} from '@websites/websites.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent, pathMatch: 'full'},
-  {path: 'websites/:id', component: WebsitesComponent},
-  {path: 'projects/:id', component: ProjectsComponent},
+  {path: 'websites', component: WebsitesComponent},
+  {path: 'projects', component: ProjectsComponent},
   {path: 'category/:tag', component: ProjectCategoryComponent}
 ];
 

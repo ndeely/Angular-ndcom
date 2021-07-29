@@ -1,34 +1,6 @@
-<footer class="text-center text-white">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6 col-md-4">
-        <h5>Websites</h5>
-        <ul>
-          <li *ngFor="let site of sites">
-            <p><a routerLink="websites/{{site.id}}">{{site.name}}</a></p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-xs-6 col-md-4">
-        <h5>Projects</h5>
-        <ul>
-          <li *ngFor="let project of projects">
-            <p><a routerLink="projects/{{project.id}}">{{project.name}}</a></p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-xs-12 col-md-4 buttons">
-        <ul>
-          <li>
-            <button class="btn btn-primary" (click)="openUrl('https://www.github.com/ndeely')"><i class="fa fa-github"></i> GitHub</button>
-          </li>
-          <li>
-            <button class="btn btn-primary" (click)="openUrl('https://www.linkedin.com/in/nialldeely/')"><i class="fa fa-linkedin"></i> LinkedIn</button>
-          </li>
-        </ul>
-      </div>
-    </div>
+<footer>
+  <div class="col-xs-12 buttons">
+    <button (click)="openUrl('https://www.github.com/ndeely')"><i class="fa fa-github"></i> GitHub</button>
+    <button (click)="openUrl('https://www.linkedin.com/in/nialldeely/')"><i class="fa fa-linkedin"></i> LinkedIn</button>
   </div>
 </footer>

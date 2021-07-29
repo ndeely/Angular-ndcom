@@ -36,19 +36,17 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-
-blockquote p {
-  display: inline;
+  p {
+    display: inline;
+  }
+  &:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
 }
 
 .centered {
@@ -92,7 +90,7 @@ blockquote p {
     max-height: 300px;
     width: auto;
     max-width: 90%;
-    margin: 0px 5%;
+    margin: auto;
   }
 
   p {
@@ -115,6 +113,7 @@ a:hover, a:active {
 }
 
 .container {
+  min-height: 100vh;
   h1, h2, h3 {
     padding: 10px;
   }
@@ -139,6 +138,75 @@ p.info {
   height: 300px;
 }
 
+// menu for websites/projects
+.menu {
+  width: 90%;
+  margin: 10px 5%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  button {
+    position: relative;
+    background-color: cadetblue;
+    color: #fff;
+    font-size: large;
+    padding: 8px;
+    margin: 5px;
+    min-width: 15%;
+    border: 1px solid #fff;
+    border-bottom: 5px solid cyan;
+    border-radius: 25px;
+    overflow: hidden;
+    &:hover, &:active, &.active {
+      border-bottom: 5px solid #1890ff;
+      color: #005bea;
+      background-color: transparent;
+      transition: 1s ease;
+      transition: background-color 0.4s ease;
+      span {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    span {
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f0f8ff;
+      z-index: -1;
+      border-radius: 25px;
+
+      height: 0px;
+      width: 0px;
+      transition: 1s ease;
+    }
+  }
+}
+
+.siteImage, .projectImage {
+  text-align: center;
+  img {
+    max-width: 95%;
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
+    display: inline;
+    margin: 0px 5px 5px 0px;
+  }
+}
+
+.desc {
+  p {
+    padding: 5px 10px;
+  }
+  .btn, a.btn {
+    margin: 10px auto;
+  }
+}
+
+.slideshow-container {
+  margin: auto;
+}
+
 .btn-primary {
   padding: 10px 20px;
   background-color:#337ab7;
@@ -147,5 +215,18 @@ p.info {
   &:hover, &:active {
     background-color:#286090;
     border-color:#204d74;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+    button {
+      min-width:90%;
+      margin: 5px 5%;
+      display: block;
+    }
   }
 }

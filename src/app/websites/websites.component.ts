@@ -1,28 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-import {WebsitesService} from '@websites/websites.service';
+
+// models
 import {Website} from '@websites/website.model';
-import {ActivatedRoute, Params} from '@angular/router';
+// services
+import {WebsitesService} from '@websites/websites.service';
 
 @Component({
   selector: 'app-websites',
   templateUrl: './websites.component.html',
   styleUrls: ['./websites.component.scss']
 })
+
 export class WebsitesComponent implements OnInit {
-  site: Website;
-  id: number;
+  selectedSite: Website = null;
+  sites: Website[];
   isLoading = false;
 
-  constructor(private ws: WebsitesService,
-              private route: ActivatedRoute) { }
+  constructor(private ws: WebsitesService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(
-      (params: Params) => {
-        this.id = +params.id;
-        this.site = this.ws.getSite(this.id);
-      }
-    )
+    this.sites = this.ws.getSites();
+  }
+
+  selectSite(id: number) {
+    const websiteButtons = document.getElementById('sites')
+      .getElementsByTagName('button');
+    if (this.selectedSite) {
+      const previousId = this.selectedSite.id;
+      websiteButtons[previousId].classList.toggle('active');
+    }
+    this.selectedSite = this.sites[id];
+    websiteButtons[id].classList.toggle('active');
   }
 
   onClick(url: string) {

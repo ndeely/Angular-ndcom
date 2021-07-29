@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {WebsitesService} from '@websites/websites.service';
-import {Website} from '@websites/website.model';
-import {Project} from '@projects/project.model';
-import {ProjectsService} from '@projects/projects.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,15 +6,10 @@ import {ProjectsService} from '@projects/projects.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  public sites: Website[];
-  public projects: Project[];
 
-  constructor(private ws: WebsitesService,
-              private ps: ProjectsService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.sites = this.ws.getSites();
-    this.projects = this.ps.getProjects();
   }
 
   openUrl(link: string) {

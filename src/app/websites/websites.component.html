@@ -1,30 +1,49 @@
-<div class="col-md-12 col-xs-12">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>{{site.name}}</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <img
-        src="{{site.imagePath}}"
-        alt="{{site.name}}"
-        class="img-responsive"
-        style="max-height: 300px;">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <p [innerHTML]="site.desc"></p>
-    </div>
-  </div>
-  <div class="row">
-    <div *ngIf="isLoading" class="centered">
-      <app-loading-spinner></app-loading-spinner>
-    </div>
-    <div *ngIf="!isLoading" class="button-container clear">
-      <button *ngIf="site.urlPaths.length > 1" class="btn btn-primary" (click)="onClick(site.urlPaths[1])">View Website</button>
-      <button *ngIf="site.urlPaths.length > 0" class="btn btn-primary" (click)="onClick(site.urlPaths[0])"><i class="fa fa-github"></i> View GitHub Repository</button>
-    </div>
-  </div>
-</div>
+<div class="content">
+  <h2>Websites</h2>
+  <div class="sites">
+    <div class="row">
+
+      <div id="sites" class="menu col-xs-12">
+        <button *ngFor="let site of sites" (click)="selectSite(site.id)">
+          {{ site.name }}<span>&nbsp;</span>
+        </button>
+      </div>
+
+      <div *ngIf="!selectedSite">
+        <div class="siteImage col-xs-12">
+          <div class="slideshow-container">
+            <span *ngFor="let site of sites" class="mySlides2">
+              <h3>{{ site.name }}</h3>
+              <a (click)="selectSite(site.id)">
+                <img
+                  src="{{ site.imagePath }}"
+                  alt="{{ site.name }}"
+                />
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="selectedSite">
+        <div class="siteImage col-xs-12">
+          <h3>{{ selectedSite.name }}</h3>
+          <img src="{{ selectedSite.imagePath }}" alt="{{ selectedSite.name }}" />
+        </div>
+        <div class="row">
+          <div class="desc col-xs-12">
+            <p [innerHTML]="selectedSite.desc"></p>
+            <div *ngIf="isLoading" class="centered">
+              <app-loading-spinner></app-loading-spinner>
+            </div>
+            <div class="button-container" *ngIf="!isLoading">
+              <button *ngIf="selectedSite.urlPaths.length > 1" class="btn btn-primary" (click)="onClick(selectedSite.urlPaths[1])">View Website</button>
+              <button *ngIf="selectedSite.urlPaths.length > 0" class="btn btn-primary" (click)="onClick(selectedSite.urlPaths[0])"><i class="fa fa-github"></i> View GitHub Repository</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- row -->
+  </div><!-- sites -->
+</div><!-- content -->

@@ -10,17 +10,11 @@
 
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="dropdown" appDropdown>
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button">Websites <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li *ngFor="let site of sites"><a routerLink="websites/{{site.id}}">{{site.name}}</a></li>
-          </ul>
+        <li>
+          <a routerLink="/websites">Websites</a>
         </li>
-        <li class="dropdown" appDropdown>
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button">Projects <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li *ngFor="let project of projects"><a routerLink="projects/{{project.id}}">{{project.name}}</a></li>
-          </ul>
+        <li>
+          <a routerLink="/projects">Projects</a>
         </li>
         <li>
           <a href="https://www.github.com/ndeely" target="_blank"><i class="fa fa-github"></i> GitHub</a>

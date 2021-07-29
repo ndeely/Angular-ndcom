@@ -1,32 +1,17 @@
-footer {
-  margin-top:20px;
+.buttons {
+  display: flex;
+  justify-content: space-between;
   background-color:#001529;
-}
 
-h5 {
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-}
-
-ul {
-  list-style-type: none;
-  text-align: center;
-  padding: 0px;
-  li a {
-    color: #FFF;
-  }
-}
-
-button {
-  margin: 10px 0px;
-}
-
-@media(max-width: 768px) {
-  .col-xs-12.buttons ul {
-    width: 60vw;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
+  button {
+    height: 100%;
+    padding: 10px 15px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition: 0.4s;
+    &:hover, &:active {
+      background-color: #1890FF;
+    }
   }
 }

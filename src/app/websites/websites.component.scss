@@ -1,11 +1,18 @@
-blockquote {
-  background: #f9f9f9;
+.siteImage img {
+  max-height: 300px;
+  display: block;
+  margin: auto;
+  &.img-thumbnail {
+    max-width: 48%;
+  }
 }
 
-img {
-  margin:25px auto;
+.slideshow-container {
+  min-height: 300px;
 }
 
-button {
-  margin:10px auto;
+@media screen and (max-width: 768px) {
+  .siteImage img.img-thumbnail {
+    max-width: 100%;
+  }
 }
