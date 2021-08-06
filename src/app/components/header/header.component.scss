@@ -1,47 +1,39 @@
 .fa-bars {
-  color:#fff;
-  float:right;
-  font-size:large;
-  margin:15px;
-  display:none;
-}
-
-.navbar-brand {
-  padding:10px 10px;
-  display: flex;
-  img {
-    max-width: 30px;
-  }
-  span {
-    padding: 4px;
-  }
+  color: white;
+  float: right;
+  font-size: large;
+  margin: 15px;
+  display: none;
 }
 
 nav.navbar {
+  background-color:#001529;
   border:none;
   border-radius: 0px;
-  background-color:#001529;
+  .container-fluid {
+    display: flex;
+  }
   a {
-    color:#fff !important;
-  }
-}
-
-ul.dropdown-menu {
-  background-color:#001529;
-  margin-top: -1px;
-  p {
-    color:#fff !important;
-    text-align: center;
-  }
-}
-
-ul.navbar-nav li {
-  a:hover,
-  a:active,
-  a:focus,
-  &.dropdown.open a.dropdown-toggle {
-    background-color: #1890FF;
-    transition: 0.3s ease-in-out;
+    &.navbar-brand {
+      padding:10px 10px;
+      display: flex;
+      img {
+        max-width: 30px;
+      }
+      span {
+        padding: 4px;
+      }
+    }
+    color: white;
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+      background-color: #1890ff;
+      &.navbar-brand {
+        background-color: transparent;
+      }
+    }
   }
 }
 
