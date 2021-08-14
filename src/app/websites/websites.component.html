@@ -3,10 +3,15 @@
   <div class="sites">
     <div class="row">
 
-      <div id="sites" class="menu col-xs-12">
-        <button *ngFor="let site of sites" (click)="selectSite(site.id)">
-          {{ site.name }}<span>&nbsp;</span>
-        </button>
+      <div id="sites" class="menu">
+        <div
+          class="menu-button"
+          *ngFor="let site of sites"
+          (click)="toggleSite(site.id)"
+          style="background-image: url({{site.imagePath}});"
+        >
+            <p>{{ site.name }}</p><span>&nbsp;</span>
+        </div>
       </div>
 
       <div *ngIf="!selectedSite">
@@ -14,7 +19,7 @@
           <div class="slideshow-container">
             <span *ngFor="let site of sites" class="mySlides2">
               <h3>{{ site.name }}</h3>
-              <a (click)="selectSite(site.id)">
+              <a (click)="toggleSite(site.id)">
                 <img
                   src="{{ site.imagePath }}"
                   alt="{{ site.name }}"

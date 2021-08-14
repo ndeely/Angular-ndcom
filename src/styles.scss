@@ -138,52 +138,6 @@ p.info {
   height: 300px;
 }
 
-// menu for websites/projects
-.menu {
-  width: 90%;
-  margin: 10px 5%;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  button {
-    position: relative;
-    background-color: cadetblue;
-    color: #fff;
-    font-size: large;
-    padding: 8px;
-    margin: 5px;
-    min-width: 15%;
-    border: 1px solid #fff;
-    border-bottom: 5px solid cyan;
-    border-radius: 25px;
-    overflow: hidden;
-    &:hover, &:active, &.active {
-      border-bottom: 5px solid #1890ff;
-      color: #005bea;
-      background-color: transparent;
-      transition: 1s ease;
-      transition: background-color 0.4s ease;
-      span {
-        height: 100%;
-        width: 100%;
-      }
-    }
-    span {
-      position: absolute;
-      top:50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #f0f8ff;
-      z-index: -1;
-      border-radius: 25px;
-
-      height: 0px;
-      width: 0px;
-      transition: 1s ease;
-    }
-  }
-}
-
 .siteImage, .projectImage {
   text-align: center;
   img {

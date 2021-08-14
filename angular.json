@@ -33,7 +33,8 @@
               "src/assets/css/slideshow.css"
 						],
 						"scripts": [
-              "src/assets/js/slideshow.js"
+              "src/assets/js/slideshow.js",
+              "src/assets/js/menu.js"
             ]
 					},
 					"configurations": {

@@ -3,7 +3,7 @@
   <div class="projects">
     <div class="row">
       <div id="projects" class="menu col-xs-12">
-        <button *ngFor="let project of projects" (click)="selectProject(project.id)">
+        <button class="menu-button" *ngFor="let project of projects" (click)="selectProject(project.id)">
           {{ project.name }}<span>&nbsp;</span>
         </button>
       </div>

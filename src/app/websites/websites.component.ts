@@ -10,13 +10,14 @@ import {WebsitesService} from '@websites/websites.service';
 @Component({
   selector: 'app-websites',
   templateUrl: './websites.component.html',
-  styleUrls: ['./websites.component.scss']
+  styleUrls: ['./websites.component.scss', '../../assets/css/menu.scss']
 })
 
 export class WebsitesComponent implements OnInit, OnDestroy {
   selectedSite: Website = null;
   sites: Website[];
   isLoading = false;
+  previousId: number;
 
   subscription: Subscription;
 
@@ -29,20 +30,20 @@ export class WebsitesComponent implements OnInit, OnDestroy {
       (params: Params) => {
         if (params.id) {
           const id = +params.id;
-          setTimeout(() => { this.selectSite(id); }, 100);
+          setTimeout(() => { this.toggleSite(id); }, 100);
         }
       }
     );
   }
 
-  selectSite(id: number) {
+  toggleSite(id: number) {
     const websiteButtons = document.getElementById('sites')
-      .getElementsByTagName('button');
+      .getElementsByClassName('menu-button');
     if (this.selectedSite) {
-      const previousId = this.selectedSite.id;
-      websiteButtons[previousId].classList.toggle('active');
+      this.previousId = this.selectedSite.id;
+      websiteButtons[this.previousId].classList.toggle('active');
     }
-    if (id < this.sites.length) {
+    if (id < this.sites.length && id !== this.previousId) {
       this.selectedSite = this.sites[id];
       websiteButtons[id].classList.toggle('active');
     }
