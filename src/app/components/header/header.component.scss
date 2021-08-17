@@ -1,4 +1,7 @@
 .fa-bars {
+  position: absolute;
+  top: 0;
+  right: 0;
   color: white;
   float: right;
   font-size: large;
@@ -7,9 +10,11 @@
 }
 
 nav.navbar {
+  transition: 1s ease-in-out;
   background-color:#001529;
   border:none;
   border-radius: 0px;
+  margin: 0px;
   .container-fluid {
     display: flex;
   }
@@ -29,16 +34,28 @@ nav.navbar {
     &:active,
     &:focus,
     &.active {
+      transition: 1s ease-in-out;
       background-color: #1890ff;
       &.navbar-brand {
         background-color: transparent;
       }
     }
   }
+  .navbar-collapse {
+    position: absolute;
+    right: 0px;
+    margin: 0px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .fa-bars {
     display:block;
+  }
+
+  .navbar-collapse {
+    top:50px;
+    z-index: 1;
+    background: #001529;
   }
 }

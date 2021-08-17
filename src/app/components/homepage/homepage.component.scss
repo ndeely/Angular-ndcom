@@ -8,21 +8,29 @@ hr {
 }
 
 .content {
-  width: 96%;
-  margin: 0 2%;
   h1, h2, h3 {
     padding: 10px;
   }
 }
 
-.intro p {
-  width: 100%;
-  padding: 20px;
-  border-radius: 0px;
-  background-color: #eee;
-  font-size: 20px;
-  padding:10px 40px;
-  margin: 10px 0px;
+.intro {
+  background-color: black;
+  height: 360px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  p {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0px;
+    background-color: #eee;
+    font-size: 20px;
+    padding:10px 40px;
+    margin: 10px 0px;
+    opacity: 70%;
+    position: absolute;
+    bottom: 0px;
+  }
 }
 
 button {

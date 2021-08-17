@@ -3,39 +3,102 @@
   text-align: center;
   overflow: hidden;
   .menu-button {
-    cursor: pointer;
     width: 100vw;
-    height: 200px;
+    height: 210px;
     overflow: hidden;
-    border-bottom: 5px solid cyan;
+    border-top: 5px solid #001529;
+    border-bottom: 5px solid #001529;
+    transition: 1s ease-in-out;
     position: relative;
     left:4000px;
     margin: 10px 0px;
+    .menu-content {
+      display: flex;
+      cursor: pointer;
+      clear: both;
+      .left-side {
+        width: 15%;
+        position: relative;
+        .logo {
+          margin-top: 45px;
+          img {
+            border: none;
+            width: 100%;
+            max-width: 150px;
+          }
+        }
+      }
+      .right-side {
+        width: 85%;
+        margin-top: 35px;
+        .image {
+          display: none;
+          img {
+            width: 90%;
+            margin: 0 5%;
+          }
+        }
+      }
+    }
     &.show {
-      transition: left 0.8s ease;
       left: 0px;
     }
     &:hover, &:active, &.active {
+      transition: 1s ease-in-out;
+      border-top: 5px solid #1890ff;
       border-bottom: 5px solid #1890ff;
-      color: brown;
       background-color: transparent;
-      transition: 1s ease;
-      p {
-        transition: background-color 1s ease;
-        background-color: lightgray;
+      p.title {
+        background-color: #1890ff;
+        color: white;
       }
     }
     &:active, &.active {
+      transition: 1s ease-in-out;
       height: auto;
+      .menu-content .right-side .image {
+        display: block;
+      }
     }
-    p {
-      position: absolute;
-      bottom: -17px;
-      right: 0%;
+    p.title {
+      transition: 1s ease-in-out;
       font-size: large;
-      background-color: white;
+      background-color: #001529;
       padding: 10px 20px;
-      box-shadow: 0 2px 2px darkgray;
+      color: white;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 221px;
+    }
+    button {
+      margin: 10px;
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+    .menu-content {
+      .left-side {
+        width: 0%;
+        .logo {
+          display: none;
+        }
+      }
+      .right-side {
+        width: 96%;
+        margin: 0 2%;
+      }
+      .menu-button p.title {
+        font-size: x-small;
+      }
+    }
+  }
+}
+
+

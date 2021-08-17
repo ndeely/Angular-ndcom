@@ -10,12 +10,13 @@ import {ProjectsService} from '@projects/projects.service';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss', '../../assets/css/menu.scss']
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
-  selectedProject: Project;
   projects: Project[];
   isLoading = false;
+  openId: number = null;
+
   subscription: Subscription;
 
   constructor(private ps: ProjectsService,
@@ -26,23 +27,27 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.subscription = this.route.params.subscribe(
       (params: Params) => {
         if (params.id) {
-          const id = +params.id;
-          setTimeout(() => { this.selectProject(id); }, 100);
+          setTimeout(() => { this.toggleProject(+params.id); }, 100);
         }
       }
     );
   }
 
-  selectProject(id: number) {
+  toggleProject(id: number) {
     const projectButtons = document.getElementById('projects')
-      .getElementsByTagName('button');
-    if (this.selectedProject) {
-      const previousId = this.selectedProject.id;
-      projectButtons[previousId].classList.toggle('active');
-    }
+      .getElementsByClassName('menu-button');
     if (id < this.projects.length) {
-      this.selectedProject = this.projects[id];
       projectButtons[id].classList.toggle('active');
+      if (this.openId === null) {
+        this.openId = id;
+      } else {
+        if (this.openId !== id) {
+          projectButtons[this.openId].classList.toggle('active');
+          this.openId = id;
+        } else {
+          this.openId = null;
+        }
+      }
     }
   }
 

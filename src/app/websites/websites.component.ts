@@ -14,10 +14,9 @@ import {WebsitesService} from '@websites/websites.service';
 })
 
 export class WebsitesComponent implements OnInit, OnDestroy {
-  selectedSite: Website = null;
   sites: Website[];
   isLoading = false;
-  previousId: number;
+  openId: number = null;
 
   subscription: Subscription;
 
@@ -29,8 +28,7 @@ export class WebsitesComponent implements OnInit, OnDestroy {
     this.subscription = this.route.params.subscribe(
       (params: Params) => {
         if (params.id) {
-          const id = +params.id;
-          setTimeout(() => { this.toggleSite(id); }, 100);
+          setTimeout(() => { this.toggleSite(+params.id); }, 100);
         }
       }
     );
@@ -39,13 +37,18 @@ export class WebsitesComponent implements OnInit, OnDestroy {
   toggleSite(id: number) {
     const websiteButtons = document.getElementById('sites')
       .getElementsByClassName('menu-button');
-    if (this.selectedSite) {
-      this.previousId = this.selectedSite.id;
-      websiteButtons[this.previousId].classList.toggle('active');
-    }
-    if (id < this.sites.length && id !== this.previousId) {
-      this.selectedSite = this.sites[id];
+    if (id < this.sites.length) {
       websiteButtons[id].classList.toggle('active');
+      if (this.openId === null) {
+        this.openId = id;
+      } else {
+        if (this.openId !== id) {
+          websiteButtons[this.openId].classList.toggle('active');
+          this.openId = id;
+        } else {
+          this.openId = null;
+        }
+      }
     }
   }
 

@@ -4,7 +4,7 @@ export class Website {
     public id: number,
     public name: string,
     public desc: string,
-    public imagePath: string,
+    public imagePaths: string[],
     public urlPaths: string[]
   ) {}
 

@@ -20,7 +20,7 @@ MySQL for the database, but I have also worked with it using PostgreSQL.</p>
 website for free which I appreciate immensely, but due to this, it does have some limitations. It does not allow me to store user images or
 videos to limit the server space that I use, and it can be slow to load the site for the first time.</p>
 `,
-      'assets/images/rubyonrails.png',
+      ['assets/images/rubyonrails.png', 'assets/images/logos/ror-icon.png'],
       ['github.com/ndeely/FriendMeter', 'guarded-meadow-50667.herokuapp.com']
     ),
     new Website(
@@ -42,7 +42,7 @@ my work with Ruby on Rails concluded, I began working with other frameworks such
 end, and working with MySQL, PostgreSQL or MongoDB as the database.</p>
 <p>Below, you can find a link to another example website I have made using Angular.</p>
 `,
-      'assets/images/angular.png',
+      ['assets/images/angular.png', 'assets/images/logos/angular-icon.png'],
       ['github.com/ndeely/Angular-Ingredients-Shop', 'www.nialldeely.com/angular']
     ),
     new Website(
@@ -55,7 +55,7 @@ applications.</p>
 complete content views to the front end, and also to return JSON data to a more developed front end. My work with NodeJS was primarily done
 using MongoDB for the database, but I have also worked with MySQL.</p>
 `,
-      'assets/images/nodejs.png',
+      ['assets/images/nodejs.png', 'assets/images/logos/nodejs-icon.png'],
       ['github.com/ndeely/nodejs-complete-guide']
     ),
     new Website(
@@ -68,7 +68,7 @@ WordPress is one of the most popular CMSs available and is used by millions of w
 full potential.</p>
 <p class="info">I am currently working on a WordPress website to showcase my knowledge of this CMS.</p>
 `,
-      'assets/images/wordpress.png',
+      ['assets/images/wordpress.png', 'assets/images/logos/wp-icon.png'],
       ['github.com/ndeely/WordPress-Development']
     ),
     new Website(
@@ -82,7 +82,7 @@ This is primarily due to my familiarity with PHP through working with WordPress 
 and my familiarity with MVC frameworks from working on projects built using other MVC frameworks such as Rails and Angular.</p>
 <p class="info">I am currently working on a Laravel website to showcase my knowledge of this framework.</p>
 `,
-      'assets/images/laravel.png',
+      ['assets/images/laravel.png', 'assets/images/logos/laravel-icon.png'],
       []
     )
   ];
@@ -92,9 +92,5 @@ and my familiarity with MVC frameworks from working on projects built using othe
 
   getSites() {
     return this.websites.slice();
-  }
-
-  getSite(id: number) {
-    return this.websites[id];
   }
 }

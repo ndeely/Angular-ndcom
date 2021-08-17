@@ -1,54 +1,58 @@
 <div class="content">
   <h2>Websites</h2>
-  <div class="sites">
-    <div class="row">
+  <div class="row">
 
-      <div id="sites" class="menu">
+    <div id="sites" class="menu">
+      <div
+        class="menu-button"
+        *ngFor="let site of sites"
+      >
         <div
-          class="menu-button"
-          *ngFor="let site of sites"
+          class="menu-content"
           (click)="toggleSite(site.id)"
-          style="background-image: url({{site.imagePath}});"
+          onClick="showBlocks()"
         >
-            <p>{{ site.name }}</p><span>&nbsp;</span>
-        </div>
-      </div>
-
-      <div *ngIf="!selectedSite">
-        <div class="siteImage col-xs-12">
-          <div class="slideshow-container">
-            <span *ngFor="let site of sites" class="mySlides2">
+          <div class="left-side">
+            <p class="title">{{ site.name }}</p>
+            <div class="logo">
+              <img src={{site.imagePaths[1]}} alt={{site.name}} />
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="image">
+              <img src={{site.imagePaths[0]}} alt={{site.name}}>
+            </div>
+            <div class="desc">
               <h3>{{ site.name }}</h3>
-              <a (click)="toggleSite(site.id)">
-                <img
-                  src="{{ site.imagePath }}"
-                  alt="{{ site.name }}"
-                />
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div *ngIf="selectedSite">
-        <div class="siteImage col-xs-12">
-          <h3>{{ selectedSite.name }}</h3>
-          <img src="{{ selectedSite.imagePath }}" alt="{{ selectedSite.name }}" />
-        </div>
-        <div class="row">
-          <div class="desc col-xs-12">
-            <p [innerHTML]="selectedSite.desc"></p>
-            <div *ngIf="isLoading" class="centered">
-              <app-loading-spinner></app-loading-spinner>
-            </div>
-            <div class="button-container" *ngIf="!isLoading">
-              <button *ngIf="selectedSite.urlPaths.length > 1" class="btn btn-primary" (click)="onClick(selectedSite.urlPaths[1])">View Website</button>
-              <button *ngIf="selectedSite.urlPaths.length > 0" class="btn btn-primary" (click)="onClick(selectedSite.urlPaths[0])"><i class="fa fa-github"></i> View GitHub Repository</button>
+              <p [innerHTML]="site.desc"></p>
+              <div *ngIf="isLoading" class="centered">
+                <app-loading-spinner></app-loading-spinner>
+              </div>
             </div>
           </div>
         </div>
+        <div class="button-container" *ngIf="!isLoading">
+          <button *ngIf="site.urlPaths.length > 1" class="btn btn-primary" (click)="onClick(site.urlPaths[1])">View Website</button>
+          <button *ngIf="site.urlPaths.length > 0" class="btn btn-primary" (click)="onClick(site.urlPaths[0])"><i class="fa fa-github"></i> View GitHub Repository</button>
+        </div>
       </div>
+    </div>
 
-    </div><!-- row -->
-  </div><!-- sites -->
+    <div *ngIf="!openId">
+      <div class="siteImage col-xs-12">
+        <div class="slideshow-container">
+          <span *ngFor="let site of sites" class="mySlides2">
+            <h3>{{ site.name }}</h3>
+            <a (click)="toggleSite(site.id)">
+              <img
+                src="{{ site.imagePaths[0] }}"
+                alt="{{ site.name }}"
+              />
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- row -->
 </div><!-- content -->
