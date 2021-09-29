@@ -1,3 +1,8 @@
+$primary: #001529;
+$lightBlue: #1890ff;
+$fresh: #4abdac;
+$sunshine: #f7b733;
+
 .menu {
   width: 100%;
   text-align: center;
@@ -6,8 +11,8 @@
     width: 100vw;
     height: 210px;
     overflow: hidden;
-    border-top: 5px solid #001529;
-    border-bottom: 5px solid #001529;
+    border-top: 5px solid $fresh;
+    border-bottom: 5px solid $fresh;
     transition: 1s ease-in-out;
     position: relative;
     left:4000px;
@@ -45,11 +50,11 @@
     }
     &:hover, &:active, &.active {
       transition: 1s ease-in-out;
-      border-top: 5px solid #1890ff;
-      border-bottom: 5px solid #1890ff;
+      border-top: 5px solid $sunshine;
+      border-bottom: 5px solid $sunshine;
       background-color: transparent;
       p.title {
-        background-color: #1890ff;
+        background-color: $sunshine;
         color: white;
       }
     }
@@ -63,7 +68,7 @@
     p.title {
       transition: 1s ease-in-out;
       font-size: large;
-      background-color: #001529;
+      background-color: $fresh;
       padding: 10px 20px;
       color: white;
       margin: 0;

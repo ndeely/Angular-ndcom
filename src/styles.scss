@@ -171,3 +171,14 @@ p.info {
     border-color:#204d74;
   }
 }
+
+// Github and LinkedIn
+$githubColor: #9943A6;
+$linkedinColor: #0486CC;
+
+.fa-github {
+  color: $githubColor !important;
+}
+.fa-linkedin {
+  color: $linkedinColor !important;
+}

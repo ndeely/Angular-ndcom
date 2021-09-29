@@ -1,7 +1,10 @@
+$menuBackgroundColor: #001529;
+$linkHoverColor: yellow;
+
 .buttons {
   display: flex;
   justify-content: space-between;
-  background-color:#001529;
+  background-color: $menuBackgroundColor;
 
   button {
     height: 100%;
@@ -11,7 +14,8 @@
     border: none;
     transition: 0.4s;
     &:hover, &:active {
-      background-color: #1890FF;
+      color: $linkHoverColor;
+      background-color: transparent;
     }
   }
 }

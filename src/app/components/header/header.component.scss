@@ -1,3 +1,6 @@
+$menuBackgroundColor: #001529;
+$linkHoverColor: yellow;
+
 .fa-bars {
   position: absolute;
   top: 0;
@@ -10,8 +13,8 @@
 }
 
 nav.navbar {
-  transition: 1s ease-in-out;
-  background-color:#001529;
+  transition: 0.3s ease-in-out;
+  background-color: $menuBackgroundColor;
   border:none;
   border-radius: 0px;
   margin: 0px;
@@ -19,6 +22,7 @@ nav.navbar {
     display: flex;
   }
   a {
+    color: white;
     &.navbar-brand {
       padding:10px 10px;
       display: flex;
@@ -26,19 +30,16 @@ nav.navbar {
         max-width: 30px;
       }
       span {
-        padding: 4px;
+        padding: 6px;
       }
     }
-    color: white;
     &:hover,
     &:active,
     &:focus,
     &.active {
-      transition: 1s ease-in-out;
-      background-color: #1890ff;
-      &.navbar-brand {
-        background-color: transparent;
-      }
+      transition: 0.3s ease-in-out;
+      color: $linkHoverColor;
+      background-color: transparent;
     }
   }
   .navbar-collapse {
