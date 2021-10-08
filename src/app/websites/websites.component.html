@@ -19,9 +19,6 @@
             </div>
           </div>
           <div class="right-side">
-            <div class="image">
-              <img src={{site.imagePaths[0]}} alt={{site.name}}>
-            </div>
             <div class="desc">
               <h3>{{ site.name }}</h3>
               <p [innerHTML]="site.desc"></p>
@@ -34,6 +31,9 @@
         <div class="button-container" *ngIf="!isLoading">
           <button *ngIf="site.urlPaths.length > 1" class="btn btn-primary" (click)="onClick(site.urlPaths[1])">View Website</button>
           <button *ngIf="site.urlPaths.length > 0" class="btn btn-primary" (click)="onClick(site.urlPaths[0])"><i class="fa fa-github"></i> View GitHub Repository</button>
+        </div>
+        <div class="image">
+          <img src={{site.imagePaths[0]}} alt={{site.name}}>
         </div>
       </div>
     </div>
