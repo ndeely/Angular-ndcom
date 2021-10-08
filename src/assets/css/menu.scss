@@ -8,15 +8,15 @@ $sunshine: #f7b733;
   text-align: center;
   overflow: hidden;
   .menu-button {
-    width: 100vw;
+    width: 96vw;
     height: 210px;
     overflow: hidden;
-    border-top: 5px solid $fresh;
-    border-bottom: 5px solid $fresh;
-    transition: 1s ease-in-out;
+    border: 5px solid $fresh;
+    transition: 0.4s ease-in-out;
+    transition: left 1s ease-in-out;
     position: relative;
     left:4000px;
-    margin: 10px 0px;
+    margin: 10px 1vw;
     .menu-content {
       display: flex;
       cursor: pointer;
@@ -49,9 +49,8 @@ $sunshine: #f7b733;
       left: 0px;
     }
     &:hover, &:active, &.active {
-      transition: 1s ease-in-out;
-      border-top: 5px solid $sunshine;
-      border-bottom: 5px solid $sunshine;
+      transition: 0.4s ease-in-out;
+      border: 5px solid $sunshine;
       background-color: transparent;
       p.title {
         background-color: $sunshine;
@@ -59,14 +58,13 @@ $sunshine: #f7b733;
       }
     }
     &:active, &.active {
-      transition: 1s ease-in-out;
       height: auto;
       .menu-content .right-side .image {
         display: block;
       }
     }
     p.title {
-      transition: 1s ease-in-out;
+      transition: 0.6s ease-in-out;
       font-size: large;
       background-color: $fresh;
       color: white;

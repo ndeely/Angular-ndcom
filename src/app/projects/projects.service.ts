@@ -11,7 +11,7 @@ export class ProjectsService {
       ['Java', 'JFrame'],
       `This repository contains a number of Java JFrame games I have created as a learning experience.<br><br>
       The notable inclusions are:<br>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="project-brief">
       <h4>Watch Your Step</h4>
       <img src="/assets/images/DIYGames/WatchYourStep.png" alt="Watch Your Step">
@@ -19,7 +19,7 @@ export class ProjectsService {
       holes can be marked with a skull and crossbones.</p>
       </div>
       </div>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="project-brief">
       <h4>Maze Generator</h4>
       <img src="/assets/images/DIYGames/MazeGenerator.png" alt="Maze Generator">
@@ -27,7 +27,7 @@ export class ProjectsService {
       are shown prior to the first play.</p>
       </div>
       </div>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="project-brief">
       <h4>Framed</h4>
       <img src="/assets/images/DIYGames/Framed.png" alt="Framed">
@@ -35,7 +35,7 @@ export class ProjectsService {
       the lights directly above, below, or to the side of the light that was switched.</p>
       </div>
       </div>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="project-brief">
       <h4>Sliding Tiles</h4>
       <img src="/assets/images/DIYGames/SlidingTiles.png" alt="Sliding Tiles">
@@ -43,7 +43,7 @@ export class ProjectsService {
       4x4 grid.</p>
       </div>
       </div>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="project-brief">
       <h4>Guess My Color</h4>
       <img src="/assets/images/DIYGames/GuessMyColor.png" alt="Guess My Color">
@@ -51,7 +51,7 @@ export class ProjectsService {
       the target color.</p>
       </div>
       </div>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-6 col-lg-4">
       <div class="project-brief">
       <h4>Zilch Dice Game</h4>
       <img src="/assets/images/DIYGames/ZilchDiceGame.png" alt="Zilch Dice Game">
